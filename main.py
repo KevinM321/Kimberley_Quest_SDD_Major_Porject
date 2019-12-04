@@ -8,8 +8,10 @@ from kivy.uix.boxlayout import BoxLayout
 kivy.require("1.11.1")
 
 Config.set('graphics', 'resizable', False)
-Config.set('graphics', 'width', '1440')
-Config.set('graphics', 'height', '795')
+# set to 1440 when finished
+Config.set('graphics', 'width', '1000')
+# set to 790 when finished
+Config.set('graphics', 'height', '600')
 # Window.clearcolor = (1, 1, 1, 1)
 Builder.load_file('loginscreen.kv')
 
