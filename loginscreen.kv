@@ -1,4 +1,51 @@
+# username input box
+<InputBox@BoxLayout>:
+    text_input: _text_input
+    l_text: ""
+    password: False
+    orientation: 'horizontal'
+    pos_hint: {"center_x": .5}
+    size_hint_x: None
+    width: self.minimum_width
+    Label:
+        markup: True
+        size_hint: None, None
+        size: 150, 50
+        text: '[b]' + root.l_text + '[/b]'
+    TextInput:
+        id: _text_input
+        multiline: False
+        write_tab: False
+        padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+        size_hint: None, None
+        size: 250, 50
+        cursor_color: 0, 0, 0, 1
+        password: root.password
+
+# password input box
+<PasswordLayout@BoxLayout>:
+    psw_input: _psw_input
+    size_hint_x: None
+    width: self.minimum_width
+    pos_hint: {"center_x": .55}
+    spacing: 50
+    InputBox:
+        id: _psw_input
+        l_text: "Password"
+        password: True
+        center_x: root.center_x
+    PasswordMask:
+        psw_input: _psw_input
+        text: 'Show'
+        left: _psw_input.right
+        size_hint_x: None
+        width: 100
+
+
 <LoginScreenLayout>
+#    usr_name_input: _usr_name_input
+#    psw_input: _psw_input
+    #background images
     RelativeLayout:
         Image:
             size_hint: None, None
@@ -10,4 +57,28 @@
             left: 0
             top: root.height
             source: "res/kq copy.jpg"
+        BoxLayout:
+#            usr_name_input: _usr_name_input
+#            psw_input: _psw_input
+            orientation: "vertical"
+            BoxLayout:
+                size_hint_x: None
+                width: self.minimum_width
+                pos_hint: {"center_x": .55}
+                InputBox:
+                    id: _usr_name_input
+                    l_text: 'Username'
+                Widget:
+                    size_hint_x: None
+                    width: 150
 
+            # password input row
+            PasswordLayout:
+                id: _psw_input
+
+<LoginScreen@Screen>:
+    name: 'login_screen'
+    screen_manager: self.screen_manager
+
+    LoginScreenLayout:
+        screen_manager: root.screen_manager
