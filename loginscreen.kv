@@ -43,9 +43,11 @@
 
 
 <LoginScreenLayout>
-#    usr_name_input: _usr_name_input
-#    psw_input: _psw_input
+    usr_name_input: _usr_name_input
+    psw_input: _psw_input
     #background images
+    anchor_x: 'left'
+    anchor_y: 'top'
     RelativeLayout:
         Image:
             size_hint: None, None
@@ -57,9 +59,11 @@
             left: 0
             top: root.height
             source: "res/kq copy.jpg"
+    BoxLayout:
+        usr_name_input: _usr_name_input
+        psw_input: _psw_input
+        orientation: "vertical"
         BoxLayout:
-#            usr_name_input: _usr_name_input
-#            psw_input: _psw_input
             orientation: "vertical"
             BoxLayout:
                 size_hint_x: None
@@ -75,6 +79,12 @@
             # password input row
             PasswordLayout:
                 id: _psw_input
+        BoxLayout:
+            BoxLayout:
+                size_hint_x: .6
+            Button:
+                text: 'Login'
+                on_release: root.login()
 
 <LoginScreen@Screen>:
     name: 'login_screen'

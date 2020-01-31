@@ -1,18 +1,27 @@
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.anchorlayout import AnchorLayout
 from kivy.uix.button import Button
 from tinydb import TinyDB, Query
 
 
-class LoginScreenLayout(BoxLayout):
+class LoginScreenLayout(AnchorLayout):
     passenger = ''
 
     def __init__(self, **kwargs):
         super(LoginScreenLayout, self).__init__(**kwargs)
 
-    # def login(self):
-    #     LoginScreenLayout.customer = passenger_functions.Passenger(self.usr_name_input.text_input.text,
-    #                                                                self.psw_input.psw_input.text_input.text)
-    #     msg = LoginScreenLayout.customer.check()
+    def login(self):
+        accounts = TinyDB('account')
+        user = accounts.search(Query().username == self.usr_name_input.text_input.text)
+        if user:
+            if self.psw_input.psw_input.text_input.text == user[0]['password']:
+                print('Login successful')
+            else:
+                print('Incorrect password')
+        elif self.usr_name_input.text_input.text == '':
+            print('Username is empty')
+        else:
+            print('Username does not exist')
 
 
 class MyButton(Button):

@@ -31,7 +31,7 @@ Builder.load_file('mealscreen.kv')
 class KimberlyQuestApp(App):
 
     def build(self):
-        return LoginScreenLayout()
+        return HomeScreenLayout()
 
 
 home = KimberlyQuestApp()

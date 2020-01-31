@@ -1,3 +1,40 @@
+<MenuButton@Button>
+    background_normal: ''
+    background_color: .25, .5, 1, 1
+    bold: True
+    size_hint_y: .1
+
+<SideBar@BoxLayout>
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        spacing: 7.5
+        BoxLayout:
+            orientation: 'vertical'
+            size_hint_y: .3
+
+        MenuButton:
+            text: 'HOME'
+        MenuButton:
+            text: 'ACTIVITY'
+        MenuButton:
+            text: 'LOCATION'
+        MenuButton:
+            text: 'MEAL'
+        BoxLayout:
+            size_hint_y: .3
+<HomeScreenLayout>
+    sidebar: _sidebar
+    SideBar:
+        id: _sidebar
+        size_hint_x: .275
+    BoxLayout:
+
+
+
 <HomeScreen@Screen>:
     name: 'home_screen'
     screen_manager: self.screen_manager
