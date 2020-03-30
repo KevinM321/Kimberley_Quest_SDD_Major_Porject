@@ -4,3 +4,206 @@
 
     ActivityScreenLayout:
         screen_manager: root.screen_manager
+
+    SideBar:
+        screen_manager: root.screen_manager
+
+
+<ActivityImage>
+    group: 'activities'
+    canvas:
+        Line:
+            width: 2.5
+            rectangle: self.x, self.y, self.width, self.height
+    background_normal: self.source
+    background_down: self.source
+
+<SelectedLabel>
+    canvas.before:
+        Color:
+            rgba: .1, .1, .8, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    bold: True
+    size_hint: None, None
+    size: 75, 30
+    text: 'Selected'
+
+<ActivityName>
+    font_size: 20
+    bold: 'True'
+    canvas.before:
+        Color:
+            rgba: .25, .25, .25, .7
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<DayButton>
+    group: 'days'
+
+<ActivityInfo>
+    Widget:
+        size_hint_x: .3
+    Button:
+        background_down: 'res/system/more_info_down.png'
+        background_normal: 'res/system/more_info_normal.png'
+        size_hint_x: .4
+        size_hint_y: None
+        height: 87.5
+        font_size: 17.5
+        bold: 'True'
+        on_release: root.popup()
+    Widget:
+        size_hint_x: .3
+
+<ActivityInfoBox@BoxLayout>
+    size_hint_y: .3
+    text: ''
+    canvas.before:
+        Color:
+            rgba: .1, .1, 1, .7
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    Label:
+        font_size: 22.5
+        size_hint_x: .3
+        text: root.text
+        halign: 'left'
+        bold: True
+        color: 0, 0, 0, 1
+
+<ActivityLayout>
+    Image:
+        source: root.source
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 15
+        spacing: 15
+        ActivityInfoBox:
+            text: 'Level:'
+            Label:
+                font_size: 17.5
+                text: root.level
+                color: 0, 0, 0, 1
+        ActivityInfoBox:
+            text: 'Price:'
+            Label:
+                font_size: 17.5
+                text: '$' + root.price
+                color: 0, 0, 0, 1
+        Label:
+            canvas.before:
+                Color:
+                    rgba: .25, .25, .25, .7
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            text: root.desc
+            halign: 'left'
+            valign: 'middle'
+
+<DropDownButton>
+    bold: True
+    text: 'Day'
+
+<ActivityScreenLayout>
+    menu: _menu
+    name: _name
+    activities: _activities
+    info: _info
+    BoxLayout:
+        Label:
+            size_hint_x: .2
+        ActivityMainScreen:
+            today: _today
+            chosen_day: _chosen_day
+            select: _select
+            orientation: 'vertical'
+            canvas.before:
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+                    source: 'res/system/kq_1 copy.jpg'
+            BoxLayout:
+                size_hint_y: .3
+                Label:
+                    size_hint_x: .65
+                    font_size: 37.5
+                    bold: True
+                    text: 'ACTIVITIES'
+                Widget:
+                    size_hint_x: .475
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_x: .2
+                    Label:
+                        font_size: 25
+                        markup: True
+                        text: "[b]Today:[/b]"
+                    Label:
+                        font_size: 25
+                        markup: True
+                        id: _chosen_day
+                        text: "[b]Chosen:[/b]"
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_x: .125
+                    Label:
+                        id: _today
+                        font_size: 20
+                    Label:
+                        id: _chosen_day
+                        font_size: 20
+                Widget:
+                    size_hint_x: .05
+                DropDownButton:
+                    size_hint_x: .225
+                    size_hint_y: .9
+                    bold: True
+                    background_down: 'res/system/Cbutton_down.png'
+                    text: 'Calendar'
+                    on_release: root.menu.drop_down()
+                Widget:
+                    size_hint_x: .1
+            BoxLayout:
+                size_hint_y: .2
+                Widget:
+                    size_hint_x: .125
+                DropDownMenu:
+                    id: _menu
+                Widget:
+                    size_hint_x: .0675
+            BoxLayout:
+                id: _select
+                size_hint_y: .1
+            BoxLayout:
+                id: _activities
+                spacing: 30
+            BoxLayout:
+                id: _name
+                size_hint_y: .125
+                spacing: 30
+            BoxLayout:
+                id: _info
+                size_hint_y: .2
+            Widget:
+                size_hint_y: .05
+            BoxLayout:
+                size_hint_y: .225
+                Label:
+                Label:
+                    size_hint_x: .13
+                BookingButton:
+                    text: 'Make Booking'
+                    font_size: 20
+                    background_down: 'res/system/Bbutton_down.png'
+                    size_hint_x: .175
+                    background_disabled_normal: 'res/system/Bbutton_disabled.png'
+                    disabled_color: 1, 1, 1, .8
+                Label:
+                    size_hint_x: .075
+            Widget:
+                size_hint_y: .05

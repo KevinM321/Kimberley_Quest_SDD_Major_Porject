@@ -1,8 +1,14 @@
 from kivy.config import Config
+Config.set('graphics', 'resizable', False)
+Config.set('graphics', 'width', '1440')
+Config.set('graphics', 'height', '855')
+
+from kivy.config import Config
 from loginscreen import *
 from homescreen import *
 from activityscreen import *
-from loginscreen import *
+from locationscreen import *
+from mealscreen import *
 
 import kivy
 # from kivy.core.window import Window
@@ -24,15 +30,26 @@ Builder.load_file('locationscreen.kv')
 Builder.load_file('mealscreen.kv')
 
 
-# class KQScreenManager(ScreenManager):
-#     pass
+class KQScreenManager(ScreenManager):
+
+    def on_current(self, instance, value):
+        super(KQScreenManager, self).on_current(instance, value)
+        system_popup = ErrorPopup()
+        if value == 'activity_screen':
+            LoginScreenLayout.body.remove_widget(system_popup)
+            ActivityScreenLayout.body.add_widget(system_popup)
+            ActivityScreenLayout.body.load(day=str(ActivityScreenLayout.body.today))
+        if value == 'login_screen':
+            LoginScreenLayout.body.add_widget(system_popup)
 
 
-class KimberlyQuestApp(App):
+class KimberleyQuestApp(App):
 
     def build(self):
-        return HomeScreenLayout()
+        self.title = 'Kimberley Quest'
+        self.icon = 'res/system/jojo_icon.png'
+        return KQScreenManager()
 
 
-home = KimberlyQuestApp()
+home = KimberleyQuestApp()
 home.run()

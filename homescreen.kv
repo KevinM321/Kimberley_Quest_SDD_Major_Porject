@@ -1,37 +1,100 @@
 <MenuButton@Button>
     background_normal: ''
-    background_color: .25, .5, 1, 1
+    background_color: .1, .1, 1, .775
     bold: True
     size_hint_y: .1
 
+<ProfileImage>:
+    source: 'res/system/male_profile.jpg'
+
+
 <SideBar@BoxLayout>
+    size_hint_x: .2
     BoxLayout:
         orientation: 'vertical'
         canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
             Rectangle:
                 size: self.size
                 pos: self.pos
-        spacing: 7.5
+                source: 'res/system/white_background.jpg'
+        spacing: 10
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: .3
-
+            Image:
+                size: self.size
+                pos: self.pos
+                source: 'res/system/sidebar_logo.png'
         MenuButton:
             text: 'HOME'
+            on_release: root.screen_manager.current = 'home_screen'
         MenuButton:
             text: 'ACTIVITY'
+            on_release: root.screen_manager.current = 'activity_screen'
         MenuButton:
             text: 'LOCATION'
+            on_release: root.screen_manager.current = 'location_screen'
         MenuButton:
             text: 'MEAL'
+            on_release: root.screen_manager.current = 'meal_screen'
         BoxLayout:
-            size_hint_y: .3
+            size_hint_y: .2
+        BoxLayout:
+            size_hint_y: .1
+            KimberleyInfo:
+                background_normal: 'res/system/kq_info_normal.png'
+                background_down: 'res/system/kq_info_down.png'
+                size_hint: None, None
+                size: 50, 50
+            Widget:
+
 <HomeScreenLayout>
-    sidebar: _sidebar
-    SideBar:
-        id: _sidebar
-        size_hint_x: .275
+    canvas.before:
+        Rectangle:
+            size: self.size
+            pos: self.pos
+            source: 'res/system/kq_2.jpg'
+    pi: _pi
+    Label:
+        size_hint_x: .2
     BoxLayout:
+        id: _main_display
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: .1
+        BoxLayout:
+            Label:
+                size_hint_x: .9
+            ProfileImage:
+                id: _pi
+                size: self.size
+                pos: self.pos
+                canvas.before:
+                    Color:
+                        rgba: 1, 1, 1, .75
+#                    Line:
+#                        width: 1.5
+#                        rectangle: self.x, self.y, self.width, self.height
+        BoxLayout:
+            size_hint_y: .075
+        BoxLayout:
+            Label:
+                size_hint_x: .075
+            BoxLayout:
+                canvas.before:
+                    Color:
+                        rgba: .3, .3, .3, .7
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+            Label:
+                size_hint_x: .075
+        BoxLayout:
+            size_hint_y: .125
+
+
 
 
 
@@ -40,4 +103,7 @@
     screen_manager: self.screen_manager
 
     HomeScreenLayout:
+        screen_manager: root.screen_manager
+
+    SideBar:
         screen_manager: root.screen_manager
