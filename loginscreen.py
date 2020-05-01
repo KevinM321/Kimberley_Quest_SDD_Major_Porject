@@ -12,6 +12,7 @@ import user_manager
 import activityscreen
 
 accounts = TinyDB('account', indent=2)
+menu = TinyDB('menu', indent=2)
 
 
 class LoginScreenLayout(RelativeLayout):
@@ -44,7 +45,7 @@ class LoginScreenLayout(RelativeLayout):
                     activityscreen.ActivityMainScreen.body.today.text = 'Day ' + activityscreen_body.today
                     self.login_box.usr_name_input.input_box.text = ''
                     self.login_box.psw_input.input_box.text = ''
-                    self.screen_manager.current = 'activity_screen'
+                    self.screen_manager.current = 'meal_screen'
                 else:
                     ErrorPopup.display('Incorrect password')
             else:

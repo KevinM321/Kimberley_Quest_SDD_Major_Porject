@@ -1,7 +1,7 @@
 from kivy.config import Config
-Config.set('graphics', 'resizable', False)
-Config.set('graphics', 'width', '1440')
-Config.set('graphics', 'height', '855')
+# Config.set('graphics', 'resizable', False)
+# Config.set('graphics', 'width', '1440')
+# Config.set('graphics', 'height', '855')
 
 from kivy.config import Config
 from loginscreen import *

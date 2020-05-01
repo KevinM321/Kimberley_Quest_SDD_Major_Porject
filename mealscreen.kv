@@ -1,3 +1,36 @@
+<MealBox>
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: .275
+            Label:
+                text: 'Main Meal'
+        BoxLayout:
+            size_hint_y: .275
+            Label:
+                text: 'Snacks'
+        BoxLayout:
+            size_hint_y: .2
+            Label:
+                text: 'Drinks/Others'
+    BoxLayout:
+        size_hint_x: .125
+<MealPanelItem>
+    background_normal: 'res/system/menu_tab_normal.png'
+    background_down: 'res/system/menu_tab_down.png'
+    MealBox:
+
+<MealTabs>
+    size_hint: .5, 1
+    do_default_tab: False
+    tab_height: 60
+    MealPanelItem:
+        text: 'Breakfast'
+    MealPanelItem:
+        text: 'Lunch'
+    MealPanelItem:
+        text: 'Dinner'
+
 <MealScreenLayout>
     canvas.before:
         Rectangle:
@@ -15,12 +48,10 @@
             Label:
                 size_hint_x: .125
             BoxLayout:
-                canvas.before:
-                    Color:
-                        rgba: .25, .25, .25, .8
-                    Rectangle:
-                        size: self.size
-                        pos: self.pos
+                MealTabs:
+                    background_image: 'res/system/menu_panel.png'
+
+
 
 
 <MealScreen@Screen>:
