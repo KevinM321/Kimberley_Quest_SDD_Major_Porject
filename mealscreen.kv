@@ -5,24 +5,89 @@
     BoxLayout:
         orientation: 'vertical'
         BoxLayout:
+            orientation: 'vertical'
             size_hint_y: .275
             id: _main_meal
+            Label:
+                size_hint_y: .6
+                text: 'Main Course'
+                bold: True
+                font_size: 27.5
+                canvas.before:
+                    Color:
+                        rgba: .35, .35, .35, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
         BoxLayout:
-            size_hint_y: .275
+            orientation: 'vertical'
+            size_hint_y: .21
             id: _snacks
             Label:
+                font_size: 27.5
+                size_hint_y: .6
                 text: 'Snacks'
+                bold: True
+                canvas.before:
+                    Color:
+                        rgba: .35, .35, .35, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
         BoxLayout:
+            orientation: 'vertical'
             size_hint_y: .2
             id: _drinks
             Label:
+                font_size: 27.5
+                size_hint_y: .6
                 text: 'Drinks'
+                bold: True
+                canvas.before:
+                    Color:
+                        rgba: .35, .35, .35, 1
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+
+<MenuItem>
+    height: 60
+    name: _name
+    desc: _desc
+    Widget:
+        size_hint_x: .05
     BoxLayout:
-        size_hint_x: .125
+        orientation: 'vertical'
+        Label:
+            text_size: self.size
+            size_hint_y: .5
+            id: _name
+            font_size: 18.5
+            halign: 'left'
+        BoxLayout:
+            size_hint_y: .7
+            Widget:
+                size_hint_x: .05
+            Label:
+                padding_y: 16
+                text_size: self.size
+                color: .7, .7, .7, 1
+                id: _desc
+                font_size: 17.5
+                halign: 'left'
+    BoxLayout:
+        size_hint_x: .1
+        CheckBox:
+            background_checkbox_normal: 'res/system/checkbox_normal.png'
+
 <MealPanelItem>
+    font_size: 17.5
+    meal_box: _meal_box
     background_normal: 'res/system/menu_tab_normal.png'
     background_down: 'res/system/menu_tab_down.png'
     MealBox:
+        id: _meal_box
 
 <MealTabs>
     size_hint: .5, 1
@@ -56,7 +121,7 @@
     BoxLayout:
         size_hint_x: .025
     BoxLayout:
-        spacing: 15
+        spacing: 20
         size_hint_x: .3
         orientation: 'vertical'
         Widget:
