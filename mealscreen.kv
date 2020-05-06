@@ -1,18 +1,22 @@
 <MealBox>
+    main_meal: _main_meal
+    drinks: _drinks
+    snacks: _snacks
     BoxLayout:
         orientation: 'vertical'
         BoxLayout:
             size_hint_y: .275
-            Label:
-                text: 'Main Meal'
+            id: _main_meal
         BoxLayout:
             size_hint_y: .275
+            id: _snacks
             Label:
                 text: 'Snacks'
         BoxLayout:
             size_hint_y: .2
+            id: _drinks
             Label:
-                text: 'Drinks/Others'
+                text: 'Drinks'
     BoxLayout:
         size_hint_x: .125
 <MealPanelItem>
@@ -44,12 +48,27 @@
         anchor_y: 'center'
         BoxLayout:
             size_hint_y: .925
-            size_hint_x: .85
             Label:
-                size_hint_x: .125
+                size_hint_x: .2
             BoxLayout:
                 MealTabs:
                     background_image: 'res/system/menu_panel.png'
+    BoxLayout:
+        size_hint_x: .025
+    BoxLayout:
+        spacing: 15
+        size_hint_x: .3
+        orientation: 'vertical'
+        Widget:
+        Button:
+            size_hint_y: .15
+            text: 'Update'
+        Button:
+            size_hint_y: .15
+            text: 'About'
+        Widget:
+    BoxLayout:
+        size_hint_x: .025
 
 
 

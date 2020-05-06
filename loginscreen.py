@@ -12,7 +12,6 @@ import user_manager
 import activityscreen
 
 accounts = TinyDB('account', indent=2)
-menu = TinyDB('menu', indent=2)
 
 
 class LoginScreenLayout(RelativeLayout):
