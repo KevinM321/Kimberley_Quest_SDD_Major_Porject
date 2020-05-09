@@ -6,17 +6,25 @@
         "Omelette (Vegetarian)": "With bell peppers, red onions, mushrooms and cheese",
         "Peanut Butter and Jam Sandwich (Vegetarian)": "Fragrant peanut butter combined with fresh seasonal jam"
       },
-      "Lunch": {},
-      "Dinner": {},
+      "Lunch": {
+      "Sandwich": "Filling",
+      "Burger": "Tasty",
+      "Paella": "Colourful"
+      },
+      "Dinner": {
+      "Steak": "Juicy",
+      "Salmon Fillet": "Fresh",
+      "Spaghetti and Meatballs": "Classic"
+      },
       "Snacks": {
         "Chips": "Sea salt crispy chips",
         "Assorted Nuts": "Quality cashews, peanuts, almonds and hazelnuts",
         "Mints": "Refreshing minty lollies"
       },
       "Drinks": {
-        "Glass of Champagne": "Louis Roederer Cristal Brut / Moet & Chandon Imperial",
+        "Coffee / Tea" : "Expresso / Earl Grey",
         "Fizzy Drinks": "Coke / Sprite / Carbonated water",
-        "Glass of Wine": "Penfolds Bin 389 / Taylor Wines"
+        "Glass of Wine / Glass of Champagne": "Penfolds Bin 389 / Louis Roederer Cristal Brut"
       }
     }
   }

@@ -3,7 +3,7 @@
     "1": {
       "username": "PeterS1",
       "activities": {
-        "1": "hi",
+        "1": "",
         "2": "",
         "3": "",
         "4": "",
@@ -19,20 +19,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "2": {
@@ -54,20 +278,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "3": {
@@ -89,20 +537,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "4": {
@@ -124,20 +796,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "5": {
@@ -159,20 +1055,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "6": {
@@ -194,20 +1314,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "7": {
@@ -229,20 +1573,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "8": {
@@ -264,20 +1832,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "9": {
@@ -299,20 +2091,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "10": {
@@ -334,20 +2350,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "11": {
@@ -369,20 +2609,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "12": {
@@ -404,20 +2868,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "13": {
@@ -439,6 +3127,249 @@
         "14": ""
       },
       "meals": {
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
+      }
+    },
+    "14": {
+      "username": "LuffyM9",
+      "activities": {
         "1": "",
         "2": "",
         "3": "",
@@ -448,25 +3379,6 @@
         "7": "",
         "8": "",
         "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
-      }
-    },
-    "14": {
-      "username": "LuffyM9",
-      "activities": {
-        "1": "res/activity/glass_bottom_boat.jpg",
-        "2": "",
-        "3": "",
-        "4": "res/activity/scuba_diving.jpg",
-        "5": "res/activity/paddleboarding.jpg",
-        "6": "res/holding_a_large_fish_and_taking_a_photo.jpg",
-        "7": "res/activity/bushwalking.jpg",
-        "8": "res/heli_ride.jpg",
-        "9": "res/activity/boat_ride.jpg",
         "10": "",
         "11": "",
         "12": "",
@@ -474,20 +3386,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "Burger",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "none",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "Omelette (Vegetarian)",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "Sandwich",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "Salmon Fillet",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "Eggs Benedict",
+            "snacks": "",
+            "drinks": "Coffee / Tea"
+          },
+          "Lunch": {
+            "main_meal": "Paella",
+            "snacks": "Assorted Nuts",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "Steak",
+            "snacks": "Mints",
+            "drinks": "Glass of Wine / Glass of Champagne"
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "15": {
@@ -509,20 +3645,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "16": {
@@ -544,20 +3904,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     },
     "17": {
@@ -579,20 +4163,244 @@
         "14": ""
       },
       "meals": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
-        "10": "",
-        "11": "",
-        "12": "",
-        "13": "",
-        "14": ""
+        "1": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "2": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "3": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "4": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "5": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "6": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "7": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "8": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "9": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "10": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "11": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "12": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "13": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        },
+        "14": {
+          "Breakfast": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Lunch": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          },
+          "Dinner": {
+            "main_meal": "",
+            "snacks": "",
+            "drinks": ""
+          }
+        }
       }
     }
   }

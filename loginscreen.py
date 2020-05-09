@@ -15,7 +15,6 @@ accounts = TinyDB('account', indent=2)
 
 
 class LoginScreenLayout(RelativeLayout):
-    passenger = ''
 
     def __init__(self, **kwargs):
         super(LoginScreenLayout, self).__init__(**kwargs)

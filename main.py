@@ -41,6 +41,12 @@ class KQScreenManager(ScreenManager):
             ActivityScreenLayout.body.load(day=str(ActivityScreenLayout.body.today))
         if value == 'login_screen':
             LoginScreenLayout.body.add_widget(system_popup)
+        if value == 'meal_screen':
+            for each in MealPanelItem.get_widgets('panel'):
+                each.update_menu()
+                if each.text == MealPanelItem.selected:
+                    selected = each
+            selected.update_menu()
 
 
 class KimberleyQuestApp(App):

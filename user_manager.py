@@ -1,5 +1,6 @@
 from tinydb import TinyDB, Query
 from datetime import date, datetime
+import activityscreen
 
 user_query = Query()
 user_bookings = TinyDB('bookings', indent=2)
@@ -22,8 +23,17 @@ class User:
         bookings[day] = activity
         user_bookings.update({'activities': bookings}, user_query.username == self.username)
 
-    def book_meals(self, day, meals):
-        pass
+    def book_meals(self, time, section, meal):
+        bookings = self.bookings[0]['meals']
+        bookings[activityscreen.ActivityScreenLayout.body.today][time][section] = meal
+        user_bookings.update({'meals': bookings}, user_query.username == self.username)
+
+    def extract_meals(self, time):
+        bookings = self.bookings[0]['meals'][activityscreen.ActivityScreenLayout.body.today][time]
+        bookings_list = []
+        for each in bookings:
+            bookings_list.append(bookings[each])
+        return bookings_list
 
     def extract_date(self):
         if self.account[0]['start_date']:

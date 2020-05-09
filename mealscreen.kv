@@ -53,6 +53,7 @@
 
 <MenuItem>
     height: 60
+    checkbox_group: _checkbox_group
     name: _name
     desc: _desc
     Widget:
@@ -79,7 +80,9 @@
     BoxLayout:
         size_hint_x: .1
         CheckBox:
-            background_checkbox_normal: 'res/system/checkbox_normal.png'
+            id: _checkbox_group
+            background_radio_normal: 'res/system/checkbox_normal.png'
+            background_radio_down: 'res/system/checkbox_down.png'
 
 <MealPanelItem>
     font_size: 17.5
@@ -94,10 +97,13 @@
     do_default_tab: False
     tab_height: 60
     MealPanelItem:
+        group: 'panel'
         text: 'Breakfast'
     MealPanelItem:
+        group: 'panel'
         text: 'Lunch'
     MealPanelItem:
+        group: "panel"
         text: 'Dinner'
 
 <MealScreenLayout>
@@ -121,22 +127,22 @@
     BoxLayout:
         size_hint_x: .025
     BoxLayout:
-        spacing: 20
+        spacing: 35
         size_hint_x: .3
         orientation: 'vertical'
         Widget:
-        Button:
-            size_hint_y: .15
+        UpdateButton:
+            size_hint_y: .165
             text: 'Update'
         Button:
-            size_hint_y: .15
+            size_hint_y: .165
             text: 'About'
         Widget:
     BoxLayout:
         size_hint_x: .025
 
 
-
+<UpdateButton>
 
 <MealScreen@Screen>:
     name: 'meal_screen'
