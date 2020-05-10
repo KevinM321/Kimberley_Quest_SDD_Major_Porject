@@ -8,7 +8,8 @@
     source: 'res/system/male_profile.jpg'
 
 
-<SideBar@BoxLayout>
+<SideBar>
+    day: _day
     size_hint_x: .2
     BoxLayout:
         orientation: 'vertical'
@@ -41,6 +42,14 @@
             on_release: root.screen_manager.current = 'location_screen'
         BoxLayout:
             size_hint_y: .2
+            Widget:
+                size_hint_y: .4
+            Label:
+                font_size: 21.25
+                id: _day
+                bold: True
+                color: 0, 0, 0, 1
+            Widget:
         BoxLayout:
             size_hint_y: .1
             KimberleyInfo:
@@ -74,9 +83,6 @@
                 canvas.before:
                     Color:
                         rgba: 1, 1, 1, .75
-#                    Line:
-#                        width: 1.5
-#                        rectangle: self.x, self.y, self.width, self.height
         BoxLayout:
             size_hint_y: .075
         BoxLayout:

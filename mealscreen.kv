@@ -130,14 +130,25 @@
         spacing: 35
         size_hint_x: .3
         orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: .3
+            Label:
+                text: 'MEAL SELECTION'
+                font_size: 37.5
+                bold: True
+            Widget:
+                size_hint_x: .125
         Widget:
+            size_hint_y: .625
         UpdateButton:
             size_hint_y: .165
             text: 'Update'
         Button:
+            on_release: root.info_popup()
             size_hint_y: .165
-            text: 'About'
+            text: 'About The Cuisine'
         Widget:
+            size_hint_y: .925
     BoxLayout:
         size_hint_x: .025
 

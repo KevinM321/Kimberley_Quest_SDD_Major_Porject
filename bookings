@@ -3410,19 +3410,19 @@
             "drinks": ""
           },
           "Lunch": {
-            "main_meal": "Sandwich",
+            "main_meal": "Paella",
             "snacks": "",
             "drinks": ""
           },
           "Dinner": {
-            "main_meal": "Salmon Fillet",
+            "main_meal": "Steak",
             "snacks": "",
             "drinks": ""
           }
         },
         "3": {
           "Breakfast": {
-            "main_meal": "Eggs Benedict",
+            "main_meal": "",
             "snacks": "",
             "drinks": "Coffee / Tea"
           },

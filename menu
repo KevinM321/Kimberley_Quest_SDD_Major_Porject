@@ -3,23 +3,131 @@
     "1": {
       "Breakfast": {
         "Eggs Benedict": "Poached eggs served with hash browns, ham, grilled tomato and bernaise sauce",
-        "Omelette (Vegetarian)": "With bell peppers, red onions, mushrooms and cheese",
-        "Peanut Butter and Jam Sandwich (Vegetarian)": "Fragrant peanut butter combined with fresh seasonal jam"
+        "English Breakfast": "Scrambled eggs, fried sausage, bacon, tomato, toast and hashbrown",
+        "Chocolate Chip Pancakes (Vegetarian)": "Sweet pancake with maple syrup"
       },
       "Lunch": {
-      "Sandwich": "Filling",
-      "Burger": "Tasty",
-      "Paella": "Colourful"
+      "Club Sandwich": "Layered with fresh tomato, lettuce, ham and mayonnaise sauce",
+      "Paella": "With fresh and tasty prawns and mussels",
+      "Chickpea Soup (Vegetarian)": "With toasted bread and butter"
       },
       "Dinner": {
-      "Steak": "Juicy",
-      "Salmon Fillet": "Fresh",
-      "Spaghetti and Meatballs": "Classic"
+      "Rib Eye Steak": "Juicy steak covered by mushroom sauce, with crispy fries and salad",
+      "Grilled Barramundi": "Fresh Barramundi with a creamy white sauce, grilled asperagus, and mashed potato",
+      "Stuffed Eggplant Parm (Vegetarian)": "With caesar salad and fries"
       },
       "Snacks": {
         "Chips": "Sea salt crispy chips",
         "Assorted Nuts": "Quality cashews, peanuts, almonds and hazelnuts",
         "Mints": "Refreshing minty lollies"
+      },
+      "Drinks": {
+        "Coffee / Tea" : "Expresso / Earl Grey",
+        "Fizzy Drinks": "Coke / Sprite / Carbonated water",
+        "Glass of Wine / Glass of Champagne": "Penfolds Bin 389 / Louis Roederer Cristal Brut"
+      }
+    },
+    "2": {
+      "Breakfast": {
+        "English Breakfast": "Scrambled eggs, fried sausage, bacon, tomato, toast and hashbrown",
+        "Yogurt Granola Bowl (Vegetarian)": "With fresh berries and Greek yogurt",
+        "Omelette (Vegetarian)": "With bell peppers, red onions, mushrooms and cheese"
+      },
+      "Lunch": {
+      "Cheese Burger": "Classic burger with matured cheddar, beef patty, onions and lettuce",
+      "Paella": "With fresh and tasty prawns and mussels",
+      "Sweet Potato Salad (Vegetarian)": "Packed with spinach, seeds and feta cheese"
+      },
+      "Dinner": {
+      "Pappardelle Al Ragu": "Flat and wide long pasta with Ragu sauce and Parmesan cheese",
+      "Roasted Pork Loin": "With grilled baby Cos lettuce, balsamic honey apple and a fennel apple sauce",
+      "Risotto (Vegetarian)": "Creamy tomato and mushroom risotto"
+      },
+      "Snacks": {
+        "Assorted Nuts": "Quality cashews, peanuts, almonds and hazelnuts",
+        "Fruits": "High quality seasonal fruits",
+        "Ice Creams": "Great for cooling down on a hot day"
+      },
+      "Drinks": {
+        "Coffee / Tea" : "Expresso / Earl Grey",
+        "Fizzy Drinks": "Coke / Sprite / Carbonated water",
+        "Glass of Wine / Glass of Champagne": "Penfolds Bin 389 / Louis Roederer Cristal Brut"
+      }
+    },
+    "3": {
+      "Breakfast": {
+        "Eggs Benedict": "Poached eggs served with hash browns, ham, grilled tomato and bernaise sauce",
+        "Peanut Butter and Jam Sandwich (Vegetarian)": "Fragrant peanut butter combined with fresh seasonal jam",
+        "Chocolate Chip Pancakes (Vegetarian)": "Sweet pancake with maple syrup"
+      },
+      "Lunch": {
+      "Club Sandwich": "Layered with fresh tomato, lettuce, ham and mayonnaise sauce",
+      "Cheese Burger": "Classic burger with matured cheddar, beef patty, onions and lettuce",
+      "Tangy Vege Wrap (Vegetarian)": "A delicious and filling meal"
+      },
+      "Dinner": {
+      "Rib Eye Steak": "Juicy steak covered by mushroom sauce, with crispy fries and salad",
+      "Roasted Pork Loin": "With grilled baby Cos lettuce, balsamic honey apple and a fennel apple sauce",
+      "Risotto (Vegetarian)": "Creamy tomato and mushroom risotto"
+      },
+      "Snacks": {
+        "Chips": "Sea salt crispy chips",
+        "Mints": "Refreshing minty lollies",
+        "Ice Creams": "Great for cooling down on a hot day"
+      },
+      "Drinks": {
+        "Coffee / Tea" : "Expresso / Earl Grey",
+        "Fizzy Drinks": "Coke / Sprite / Carbonated water",
+        "Glass of Wine / Glass of Champagne": "Penfolds Bin 389 / Louis Roederer Cristal Brut"
+      }
+    },
+    "4": {
+      "Breakfast": {
+        "English Breakfast": "Scrambled eggs, fried sausage, bacon, tomato, toast and hashbrown",
+        "Yogurt Granola Bowl (Vegetarian)": "With fresh berries and Greek yogurt",
+        "Chocolate Chip Pancakes (Vegetarian)": "Sweet pancake with maple syrup"
+      },
+      "Lunch": {
+      "Cheese Burger": "Classic burger with matured cheddar, beef patty, onions and lettuce",
+      "Chickpea Soup (Vegetarian)": "With toasted bread and butter",
+      "Sweet Potato Salad (Vegetarian)": "Packed with spinach, seeds and feta cheese"
+      },
+      "Dinner": {
+      "Grilled Barramundi": "Fresh Barramundi with a creamy white sauce, grilled asperagus, and mashed potato",
+      "Pappardelle Al Ragu": "Flat and wide long pasta with Ragu sauce and Parmesan cheese",
+      "Stuffed Eggplant Parm (Vegetarian)": "With caesar salad and fries"
+      },
+      "Snacks": {
+        "Assorted Nuts": "Quality cashews, peanuts, almonds and hazelnuts",
+        "Fruits": "High quality seasonal fruits",
+        "Ice Creams": "Great for cooling down on a hot day"
+      },
+      "Drinks": {
+        "Coffee / Tea" : "Expresso / Earl Grey",
+        "Fizzy Drinks": "Coke / Sprite / Carbonated water",
+        "Glass of Wine / Glass of Champagne": "Penfolds Bin 389 / Louis Roederer Cristal Brut"
+      }
+    },
+    "5": {
+      "Breakfast": {
+        "Yogurt Granola Bowl (Vegetarian)": "With fresh berries and Greek yogurt",
+        "Omelette (Vegetarian)": "With bell peppers, red onions, mushrooms and cheese",
+        "Peanut Butter and Jam Sandwich (Vegetarian)": "Fragrant peanut butter combined with fresh seasonal jam"
+      },
+      "Lunch": {
+      "Cheese Burger": "Classic burger with matured cheddar, beef patty, onions and lettuce",
+      "Paella": "With fresh and tasty prawns and mussels",
+      "Chickpea Soup (Vegetarian)": "With toasted bread and butter"
+      },
+      "Dinner": {
+      "Grilled Barramundi": "Fresh Barramundi with a creamy white sauce, grilled asperagus, and mashed potato",
+      "Risotto (Vegetarian)": "Creamy tomato and mushroom risotto",
+      "Stuffed Eggplant Parm (Vegetarian)": "With caesar salad and fries"
+      },
+      "Snacks": {
+        "Chips": "Sea salt crispy chips",
+        "Mints": "Refreshing minty lollies",
+        "Ice Creams": "Great for cooling down on a hot day"
       },
       "Drinks": {
         "Coffee / Tea" : "Expresso / Earl Grey",

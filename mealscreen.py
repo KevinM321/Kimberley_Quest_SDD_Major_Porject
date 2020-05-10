@@ -1,9 +1,31 @@
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
-from tinydb import TinyDB, Query
+from kivy.uix.popup import Popup
+from kivy.uix.image import Image
+from kivy.uix.label import Label
+from tinydb import TinyDB
 from kivy.clock import Clock
 import loginscreen
+
+about_cuisine = "Cuisine on board Kimberley Quest II is simply delicious.\n" \
+                "All meals are prepared by our talented chef in the fully equipped gourmet galley, \n" \
+                "offering an array of fresh fish, seafood, the highest quality meats, \n" \
+                "freshly baked breads and some of the best local produce. \n\n" \
+                "The menu is designed with variety in mind and you can expect\n" \
+                "a minimum of three meals each day with tasty treats and snacks in between meals.\n" \
+                "When our guests catch fresh fish, oysters or crabs, you can expect to see them on the menu!\n\n" \
+                "With both indoor and outdoor dining areas, \n" \
+                "you can relax while enjoying the amazing cuisine and the ever-changing backdrop. \n" \
+                "The air conditioned indoor dining area offers a large open dining/lounge space\n" \
+                "and is an excellent location to sit down and enjoy a delicious meal\n" \
+                "with views through our full length windows,\n" \
+                "whilst the outdoor dining area offers a relaxed environment complete with a soft ocean breeze.\n\n" \
+                "We cater for all dietary requirements and special needs.\n" \
+                "We have endless fresh drinking water, tea,\n" \
+                "coffee and an espresso machine available 24 hours a day.\n\n" \
+                "Kimberley Quest II is a fully licenced vessel and\n" \
+                "beverages can be pre-ordered prior to your departures. BYO is also an option."
 
 
 class MealScreenLayout(BoxLayout):
@@ -11,16 +33,29 @@ class MealScreenLayout(BoxLayout):
     def __init__(self, **kwargs):
         super(MealScreenLayout, self).__init__(**kwargs)
 
+    @staticmethod
+    def info_popup():
+        popup = Popup(size_hint=(.6, .6),
+                      content=Label(text=about_cuisine,
+                                    color=(0, 0, 0, 1),
+                                    font_size=16.75),
+                      separator_color=(.1, .1, 1, .775),
+                      title='Cuisine',
+                      title_size=30,
+                      title_color=(0, 0, 0, 1),
+                      pos_hint={'x': .3, 'y': .2},
+                      background='res/system/white_background.jpg')
+        popup.open()
+
 
 class MealPanelItem(TabbedPanelItem):
 
     def __init__(self, **kwargs):
         super(MealPanelItem, self).__init__(**kwargs)
-        Clock.schedule_once(lambda dt: self.build_menu(), 0.5)
         MealPanelItem.selected = 'Breakfast'
 
-    def build_menu(self):
-        menu_data = TinyDB('menu', indent=2).all()[0]
+    def build_menu(self, menu):
+        menu_data = TinyDB('menu', indent=2).all()[int(menu)-1]
         menu_meal = menu_data[self.text]
         for each in menu_meal:
             item = MenuItem()
@@ -104,18 +139,11 @@ class MealTabs(TabbedPanel):
 
     def __init__(self, **kwargs):
         super(MealTabs, self).__init__(**kwargs)
+        MealTabs.body = self
 
 
 class MealBox(BoxLayout):
     pass
-    # def __init__(self, **kwargs):
-    #     super(MealBox, self).__init__(**kwargs)
-    #     MealBox.body = self
-    #
-    # def generate_menu(self, meal):
-    #     menu_data = TinyDB('menu', indent=2)
-    #     menu = menu_data.all()[0][meal]
-    #     self.main_meal.add_widget(Button(text='lol'))
 
 
 class MenuItem(BoxLayout):

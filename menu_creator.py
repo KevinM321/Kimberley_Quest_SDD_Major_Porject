@@ -1,3 +1,6 @@
+# THIS IS NOW USELESS
+#
+#
 # from tinydb import TinyDB, Query
 #
 # menu = TinyDB('menu', indent=2)

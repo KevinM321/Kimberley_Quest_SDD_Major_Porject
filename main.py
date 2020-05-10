@@ -3,7 +3,6 @@ from kivy.config import Config
 # Config.set('graphics', 'width', '1440')
 # Config.set('graphics', 'height', '855')
 
-from kivy.config import Config
 from loginscreen import *
 from homescreen import *
 from activityscreen import *
@@ -12,6 +11,7 @@ from mealscreen import *
 
 import kivy
 # from kivy.core.window import Window
+from kivy.clock import Clock
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
@@ -43,10 +43,10 @@ class KQScreenManager(ScreenManager):
             LoginScreenLayout.body.add_widget(system_popup)
         if value == 'meal_screen':
             for each in MealPanelItem.get_widgets('panel'):
-                each.update_menu()
+                Clock.schedule_once(lambda dt: each.update_menu(), .5)
                 if each.text == MealPanelItem.selected:
                     selected = each
-            selected.update_menu()
+            Clock.schedule_once(lambda dt: selected.update_menu(), .5)
 
 
 class KimberleyQuestApp(App):

@@ -8,8 +8,11 @@ from passlib.hash import pbkdf2_sha256
 from kivy.clock import Clock
 from kivy.uix.image import Image
 from kivy.animation import Animation
+from random import randint
 import user_manager
 import activityscreen
+import homescreen
+import mealscreen
 
 accounts = TinyDB('account', indent=2)
 
@@ -44,6 +47,17 @@ class LoginScreenLayout(RelativeLayout):
                     self.login_box.usr_name_input.input_box.text = ''
                     self.login_box.psw_input.input_box.text = ''
                     self.screen_manager.current = 'meal_screen'
+                    account = accounts.search(Query().username == LoginScreenLayout.body.user.username)[0]
+                    if account['day'] == activityscreen_body.today:
+                        for each in mealscreen.MealPanelItem.get_widgets('panel'):
+                            each.build_menu(account['menu'])
+                    else:
+                        account['day'] = activityscreen_body.today
+                        account['menu'] = str(randint(1, 5))
+                        accounts.update(account, Query().username == LoginScreenLayout.body.user.username)
+                        for each in mealscreen.MealPanelItem.get_widgets('panel'):
+                            each.build_menu(account['menu'])
+                    homescreen.SideBar.body.display_date(activityscreen_body.today)
                 else:
                     ErrorPopup.display('Incorrect password')
             else:

@@ -43,5 +43,5 @@ class User:
             return day_passed
         else:
             start_date = date.today().strftime('%d-%m-%y')
-            user_account.update({'start_date': start_date}, user_query.username == self.username)
+            user_account.update({'start_date': start_date, 'day': '1'}, user_query.username == self.username)
             return '1'

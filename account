@@ -3,87 +3,121 @@
     "1": {
       "username": "PeterS1",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": "05-05-20"
+      "start_date": "05-05-20",
+      "day": "",
+      "menu": ""
     },
     "2": {
       "username": "Le-AnneS1",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "3": {
       "username": "JackB2",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "4": {
       "username": "JennyB2",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "5": {
       "username": "SarahJ3",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "6": {
       "username": "RogerJ4",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "7": {
       "username": "JackP5",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "8": {
       "username": "KerryP5",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "9": {
       "username": "VoN6",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "10": {
       "username": "YoonN6",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "11": {
       "username": "TaroT7",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "12": {
       "username": "WanLeeT7",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "13": {
       "username": "BrandoD8",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "14": {
       "username": "LuffyM9",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": "07-05-20"
+      "start_date": "08-05-20",
+      "day": "3",
+      "menu": "2"
     },
     "15": {
       "username": "ShanksP9",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "16": {
       "username": "SpikeS10",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     },
     "17": {
       "username": "FayeV10",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": ""
+      "start_date": "",
+      "day": "",
+      "menu": ""
     }
   }
 }
