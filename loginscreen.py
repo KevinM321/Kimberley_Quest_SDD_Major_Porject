@@ -46,7 +46,7 @@ class LoginScreenLayout(RelativeLayout):
                     activityscreen.ActivityMainScreen.body.today.text = 'Day ' + activityscreen_body.today
                     self.login_box.usr_name_input.input_box.text = ''
                     self.login_box.psw_input.input_box.text = ''
-                    self.screen_manager.current = 'meal_screen'
+                    self.screen_manager.current = 'home_screen'
                     account = accounts.search(Query().username == LoginScreenLayout.body.user.username)[0]
                     if account['day'] == activityscreen_body.today:
                         for each in mealscreen.MealPanelItem.get_widgets('panel'):
@@ -57,7 +57,7 @@ class LoginScreenLayout(RelativeLayout):
                         accounts.update(account, Query().username == LoginScreenLayout.body.user.username)
                         for each in mealscreen.MealPanelItem.get_widgets('panel'):
                             each.build_menu(account['menu'])
-                    homescreen.SideBar.body.display_date(activityscreen_body.today)
+                    homescreen.SideBar.display_date(activityscreen_body.today)
                 else:
                     ErrorPopup.display('Incorrect password')
             else:

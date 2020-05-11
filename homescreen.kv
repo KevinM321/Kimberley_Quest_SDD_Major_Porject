@@ -7,6 +7,18 @@
 <ProfileImage>:
     source: 'res/system/male_profile.jpg'
 
+<ProfileInfo>:
+    Label:
+        font_size: 25
+        text: 'type:'
+    Label:
+        size_hint_x: .3
+        font_size: 20
+        text: 'info'
+
+<HomeScreenButton@Button>:
+    font_size: 17.5
+    bold: True
 
 <SideBar>
     day: _day
@@ -66,16 +78,44 @@
             pos: self.pos
             source: 'res/system/kq_2.jpg'
     pi: _pi
+    activity_img: _activity_img
+    activity_name: _activity_name
     Label:
         size_hint_x: .2
     BoxLayout:
         id: _main_display
         orientation: 'vertical'
         BoxLayout:
-            size_hint_y: .1
-        BoxLayout:
+            size_hint_y: .225
             Label:
+                text: 'Home'
+                font_size: 37.5
+                size_hint_x: .375
+                bold: True
+                color: 0, 0, 0, 1
+            Widget:
+        BoxLayout:
+            Widget:
+                size_hint_x: .225
+            BoxLayout:
                 size_hint_x: .9
+                orientation: 'vertical'
+                Label:
+                    id: _activity_name
+                    text_size: self.size
+                    color: 0, 0, 0, 1
+                    font_size: 22.5
+                    size_hint_y: .15
+                    halign: 'left'
+                Image:
+                    canvas.before:
+                        Color:
+                            rgba: .3, .3, .3, .9
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                    id: _activity_img
+
             ProfileImage:
                 id: _pi
                 size: self.size
@@ -83,23 +123,58 @@
                 canvas.before:
                     Color:
                         rgba: 1, 1, 1, .75
+                size_hint_x: .95
         BoxLayout:
             size_hint_y: .075
         BoxLayout:
             Label:
                 size_hint_x: .075
             BoxLayout:
+                orientation: 'vertical'
                 canvas.before:
                     Color:
                         rgba: .3, .3, .3, .7
                     Rectangle:
                         size: self.size
                         pos: self.pos
-            Label:
-                size_hint_x: .075
-        BoxLayout:
-            size_hint_y: .125
+                    Line:
+                        width: 3.25
+                        rectangle: self.x, self.y, self.width, self.height
+                BoxLayout:
+                    BoxLayout:
+                        orientation: 'vertical'
+                        ProfileInfo:
+                        ProfileInfo:
+                    BoxLayout:
+                        orientation: 'vertical'
+                        ProfileInfo:
+                        ProfileInfo:
+                BoxLayout:
+                    size_hint_y: .2
+                    Widget:
+                    HomeScreenButton:
+                        text: 'Change Profile'
+                        size_hint_x: .275
+                    Widget:
 
+            Label:
+                size_hint_x: .03
+        Widget:
+            size_hint_y: .04
+        BoxLayout:
+            size_hint_y: .2
+            Widget:
+            BoxLayout:
+                size_hint_x: .375
+                spacing: 20
+                HomeScreenButton
+                    text: 'View Receipt'
+                HomeScreenButton:
+                    text: 'Change Password'
+            Widget:
+                size_hint_x: .0275
+        Widget
+            size_hint_y: .04
 
 
 
@@ -112,4 +187,5 @@
         screen_manager: root.screen_manager
 
     SideBar:
+        group: 'sidebar'
         screen_manager: root.screen_manager

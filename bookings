@@ -3373,8 +3373,8 @@
         "1": "",
         "2": "",
         "3": "",
-        "4": "",
-        "5": "",
+        "4": "res/activity/fishing.jpg",
+        "5": "res/activity/paddleboarding.jpg",
         "6": "",
         "7": "",
         "8": "",
@@ -3439,8 +3439,8 @@
         },
         "4": {
           "Breakfast": {
-            "main_meal": "",
-            "snacks": "",
+            "main_meal": "Chocolate Chip Pancakes (Vegetarian)",
+            "snacks": "Chips",
             "drinks": ""
           },
           "Lunch": {

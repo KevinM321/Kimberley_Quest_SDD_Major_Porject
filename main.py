@@ -47,6 +47,8 @@ class KQScreenManager(ScreenManager):
                 if each.text == MealPanelItem.selected:
                     selected = each
             Clock.schedule_once(lambda dt: selected.update_menu(), .5)
+        if value == 'home_screen':
+            HomeScreenLayout.body.update_activity_today()
 
 
 class KimberleyQuestApp(App):
