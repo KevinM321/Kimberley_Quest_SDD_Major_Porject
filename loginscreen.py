@@ -57,6 +57,7 @@ class LoginScreenLayout(RelativeLayout):
                         accounts.update(account, Query().username == LoginScreenLayout.body.user.username)
                         for each in mealscreen.MealPanelItem.get_widgets('panel'):
                             each.build_menu(account['menu'])
+                    homescreen.HomeScreenLayout.body.update_profile(self.body.user)
                     homescreen.SideBar.display_date(activityscreen_body.today)
                 else:
                     ErrorPopup.display('Incorrect password')

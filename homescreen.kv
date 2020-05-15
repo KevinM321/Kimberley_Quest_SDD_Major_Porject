@@ -7,16 +7,185 @@
 <ProfileImage>:
     source: 'res/system/male_profile.jpg'
 
-<ProfileInfo>:
+<ProfileInputBox@BoxLayout>:
+    spacing: 100
+    text_input: _text_input
+    l_text: ''
+    l_width: 100
+    password: False
     Label:
-        font_size: 25
-        text: 'type:'
-    Label:
-        size_hint_x: .3
-        font_size: 20
-        text: 'info'
+        color: 0, 0, 0, 1
+        bold: True
+        size_hint_x: None
+        width: 250
+        text_size: self.size
+        halign: 'right'
+        valign: 'middle'
+        text: root.l_text
+    TextInput:
+        id: _text_input
+        size_hint_x: None
+        width: root.l_width
+        multiline: False
+        write_tab: False
+        padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+        cursor_color: 0, 0, 0, 1
+        password: root.password
+    Widget:
 
-<HomeScreenButton@Button>:
+<ChangeProfileLayout>
+    cancel_button: _cancel_button
+    confirm_button: _confirm_button
+    orientation: 'vertical'
+    spacing: 15
+    Widget:
+        size_hint_y: .1
+    ProfileInputBox:
+        size_hint_y: .35
+        l_text: 'Age:'
+        l_width: 125
+    ProfileInputBox:
+        size_hint_y: .35
+        l_text: 'Sex:'
+        l_width: 125
+    ProfileInputBox:
+        l_text: 'Mailing Address:'
+        l_width: 300
+        size_hint_y: .6
+    BoxLayout:
+        text_input: _text_input
+        l_text: 'Special Notes:'
+        spacing: 100
+        Label:
+            color: 0, 0, 0, 1
+            bold: True
+            size_hint_x: None
+            width: 250
+            text_size: self.size
+            halign: 'right'
+            valign: 'middle'
+            text: self.parent.l_text
+        TextInput:
+            auto_indent: True
+            hint_text: "Please put in 'None' if you have no special notes"
+            id: _text_input
+            size_hint_x: None
+            width: 300
+            write_tab: False
+            cursor_color: 0, 0, 0, 1
+        Widget:
+    BoxLayout:
+        size_hint_y: .5
+        spacing: 25
+        Widget:
+        Button:
+            id: _confirm_button
+            text: 'Confirm'
+        Button:
+            id: _cancel_button
+            text: 'Cancel'
+        Widget:
+
+<ReceiptLabel>:
+    text_size: self.size
+    valign: 'middle'
+    halign: 'center'
+    color: 0, 0, 0, 1
+    font_size: 17.5
+    canvas:
+        Color:
+            rgba: .3, .3, .3, 1
+        Line:
+            width: .75
+            points: self.x, self.y, self.x + self.width, self.y
+
+<ReceiptLayout>:
+    sum: _sum
+    receipt_rows: _receipt_rows
+    orientation: 'vertical'
+    BoxLayout:
+        canvas:
+            Line:
+                width: 2.5
+                points: self.x, self.y, self.x + self.width, self.y
+        size_hint_y: .1125
+        Widget:
+            size_hint_x: .175
+        Label:
+            bold: True
+            color: 0, 0, 0, 1
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            font_size: 22.5
+            text: 'Activity Name'
+            size_hint_x: .5
+        Label:
+            bold: True
+            color: 0, 0, 0, 1
+            font_size: 22.5
+            size_hint_x: .2
+            text: 'Price'
+        Widget:
+            size_hint_x: .15
+    BoxLayout
+        id: _receipt_rows
+        orientation: 'vertical'
+        spacing: 10
+        Widget:
+            size_hint_y: .125
+    BoxLayout:
+        canvas:
+            Color:
+                rgba: .1, .1, 1, 1
+            Line:
+                width: 2.5
+                points: self.x, self.y + self.height, self.x + self.width, self.y + self.height
+        size_hint_y: .1125
+        Widget:
+            size_hint_x: .9
+        Label:
+            size_hint_x: .295
+            text: 'Sum:'
+            bold: True
+            color: 0, 0, 0, 1
+            font_size: 22.5
+        Label:
+            text_size: self.size
+            halign: 'left'
+            valign: 'middle'
+            id: _sum
+            font_size: 18.5
+            color: 0, 0, 0, 1
+            size_hint_x: .425
+
+<ProfileInfo>:
+    info: _info
+    type: _type
+    Label:
+        text_size: self.size
+        font_size: 22.5
+        bold: True
+        id: _type
+        size_hint_x: .3
+        valign: 'middle'
+        halign: 'center'
+    Label:
+        text_size: self.size
+        font_size: 22.5
+        bold: True
+        text: ':'
+        size_hint_x: .1
+        valign: 'middle'
+        halign: 'left'
+    Label:
+        text_size: self.size
+        font_size: 20
+        id: _info
+        valign: 'middle'
+        halign: 'center'
+
+<HomeScreenButton>:
     font_size: 17.5
     bold: True
 
@@ -80,13 +249,14 @@
     pi: _pi
     activity_img: _activity_img
     activity_name: _activity_name
+    profile: _profile
     Label:
         size_hint_x: .2
     BoxLayout:
         id: _main_display
         orientation: 'vertical'
         BoxLayout:
-            size_hint_y: .225
+            size_hint_y: .175
             Label:
                 text: 'Home'
                 font_size: 37.5
@@ -100,13 +270,20 @@
             BoxLayout:
                 size_hint_x: .9
                 orientation: 'vertical'
-                Label:
-                    id: _activity_name
-                    text_size: self.size
-                    color: 0, 0, 0, 1
-                    font_size: 22.5
-                    size_hint_y: .15
-                    halign: 'left'
+                BoxLayout:
+                    size_hint_y: .275
+                    Label:
+                        text: "Today's Activity:"
+                        color: 0, 0, 0, 1
+                        font_size: 22.5
+                    Label:
+                        id: _activity_name
+                        text_size: self.size
+                        size: self.texture_size
+                        color: 0, 0, 0, 1
+                        font_size: 20
+                        valign: 'middle'
+                        halign: 'left'
                 Image:
                     canvas.before:
                         Color:
@@ -127,6 +304,7 @@
         BoxLayout:
             size_hint_y: .075
         BoxLayout:
+            size_hint_y: .85
             Label:
                 size_hint_x: .075
             BoxLayout:
@@ -141,22 +319,15 @@
                         width: 3.25
                         rectangle: self.x, self.y, self.width, self.height
                 BoxLayout:
-                    BoxLayout:
-                        orientation: 'vertical'
-                        ProfileInfo:
-                        ProfileInfo:
-                    BoxLayout:
-                        orientation: 'vertical'
-                        ProfileInfo:
-                        ProfileInfo:
+                    id: _profile
+                    orientation: 'vertical'
                 BoxLayout:
                     size_hint_y: .2
                     Widget:
                     HomeScreenButton:
                         text: 'Change Profile'
-                        size_hint_x: .275
-                    Widget:
-
+                        size_hint_x: .225
+                        on_release: self.change_profile()
             Label:
                 size_hint_x: .03
         Widget:
@@ -169,8 +340,10 @@
                 spacing: 20
                 HomeScreenButton
                     text: 'View Receipt'
+                    on_release: self.view_receipt()
                 HomeScreenButton:
                     text: 'Change Password'
+                    on_release: self.change_password()
             Widget:
                 size_hint_x: .0275
         Widget

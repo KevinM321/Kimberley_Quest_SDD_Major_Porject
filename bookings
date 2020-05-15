@@ -3374,11 +3374,11 @@
         "2": "",
         "3": "",
         "4": "res/activity/fishing.jpg",
-        "5": "res/activity/paddleboarding.jpg",
+        "5": "res/activity/catch_and_cook.jpg",
         "6": "",
-        "7": "",
-        "8": "",
-        "9": "",
+        "7": "res/activity/holding_a_large_fish_and_taking_a_photo.jpg",
+        "8": "res/activity/heli_ride.jpg",
+        "9": "res/activity/boat_ride.jpg",
         "10": "",
         "11": "",
         "12": "",
@@ -3474,7 +3474,7 @@
         "6": {
           "Breakfast": {
             "main_meal": "",
-            "snacks": "",
+            "snacks": "Ice Creams",
             "drinks": ""
           },
           "Lunch": {
@@ -3490,19 +3490,19 @@
         },
         "7": {
           "Breakfast": {
-            "main_meal": "",
-            "snacks": "",
+            "main_meal": "Chocolate Chip Pancakes (Vegetarian)",
+            "snacks": "Mints",
             "drinks": ""
           },
           "Lunch": {
             "main_meal": "",
-            "snacks": "",
+            "snacks": "Ice Creams",
             "drinks": ""
           },
           "Dinner": {
             "main_meal": "",
             "snacks": "",
-            "drinks": ""
+            "drinks": "Coffee / Tea"
           }
         },
         "8": {
