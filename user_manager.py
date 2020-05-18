@@ -61,3 +61,6 @@ class User:
     def update_profile(self, info):
         name = self.extract_profile()['name']
         user_profile.update(info, user_query.name == name)
+
+    def register(self):
+        pass

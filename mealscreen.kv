@@ -112,48 +112,46 @@
             size: self.size
             pos: self.pos
             source: 'res/system/kq_3.jpg'
-    Label:
-        size_hint_x: .2
-    AnchorLayout:
-        anchor_x: 'left'
-        anchor_y: 'center'
-        BoxLayout:
-            size_hint_y: .925
-            Label:
-                size_hint_x: .2
+    BoxLayout:
+        Label:
+            size_hint_x: .2
+        AnchorLayout:
+            anchor_x: 'left'
+            anchor_y: 'center'
             BoxLayout:
-                MealTabs:
-                    background_image: 'res/system/menu_panel.png'
-    BoxLayout:
-        size_hint_x: .025
-    BoxLayout:
-        spacing: 35
-        size_hint_x: .3
-        orientation: 'vertical'
+                size_hint_y: .925
+                Label:
+                    size_hint_x: .2
+                BoxLayout:
+                    MealTabs:
+                        background_image: 'res/system/menu_panel.png'
         BoxLayout:
-            size_hint_y: .3
-            Label:
-                text: 'MEAL SELECTION'
-                font_size: 37.5
-                bold: True
+            size_hint_x: .025
+        BoxLayout:
+            spacing: 35
+            size_hint_x: .3
+            orientation: 'vertical'
+            BoxLayout:
+                size_hint_y: .3
+                Label:
+                    text: 'MEAL SELECTION'
+                    font_size: 37.5
+                    bold: True
+                Widget:
+                    size_hint_x: .125
             Widget:
-                size_hint_x: .125
-        Widget:
-            size_hint_y: .625
-        UpdateButton:
-            size_hint_y: .165
-            text: 'Update'
-        Button:
-            on_release: root.info_popup()
-            size_hint_y: .165
-            text: 'About The Cuisine'
-        Widget:
-            size_hint_y: .925
-    BoxLayout:
-        size_hint_x: .025
-
-
-<UpdateButton>
+                size_hint_y: .625
+            UpdateButton:
+                size_hint_y: .165
+                text: 'Update'
+            Button:
+                on_release: root.info_popup()
+                size_hint_y: .165
+                text: 'About The Cuisine'
+            Widget:
+                size_hint_y: .925
+        BoxLayout:
+            size_hint_x: .025
 
 <MealScreen@Screen>:
     name: 'meal_screen'

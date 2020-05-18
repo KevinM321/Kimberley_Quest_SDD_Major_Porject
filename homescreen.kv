@@ -250,104 +250,105 @@
     activity_img: _activity_img
     activity_name: _activity_name
     profile: _profile
-    Label:
-        size_hint_x: .2
     BoxLayout:
-        id: _main_display
-        orientation: 'vertical'
+        Label:
+            size_hint_x: .2
         BoxLayout:
-            size_hint_y: .175
-            Label:
-                text: 'Home'
-                font_size: 37.5
-                size_hint_x: .375
-                bold: True
-                color: 0, 0, 0, 1
-            Widget:
-        BoxLayout:
-            Widget:
-                size_hint_x: .225
+            id: _main_display
+            orientation: 'vertical'
             BoxLayout:
-                size_hint_x: .9
-                orientation: 'vertical'
+                size_hint_y: .175
+                Label:
+                    text: 'Home'
+                    font_size: 37.5
+                    size_hint_x: .375
+                    bold: True
+                    color: 0, 0, 0, 1
+                Widget:
+            BoxLayout:
+                Widget:
+                    size_hint_x: .225
                 BoxLayout:
-                    size_hint_y: .275
-                    Label:
-                        text: "Today's Activity:"
-                        color: 0, 0, 0, 1
-                        font_size: 22.5
-                    Label:
-                        id: _activity_name
-                        text_size: self.size
-                        size: self.texture_size
-                        color: 0, 0, 0, 1
-                        font_size: 20
-                        valign: 'middle'
-                        halign: 'left'
-                Image:
+                    size_hint_x: .9
+                    orientation: 'vertical'
+                    BoxLayout:
+                        size_hint_y: .275
+                        Label:
+                            text: "Today's Activity:"
+                            color: 0, 0, 0, 1
+                            font_size: 22.5
+                        Label:
+                            id: _activity_name
+                            text_size: self.size
+                            size: self.texture_size
+                            color: 0, 0, 0, 1
+                            font_size: 20
+                            valign: 'middle'
+                            halign: 'left'
+                    Image:
+                        canvas.before:
+                            Color:
+                                rgba: .3, .3, .3, .9
+                            Rectangle:
+                                size: self.size
+                                pos: self.pos
+                        id: _activity_img
+
+                ProfileImage:
+                    id: _pi
+                    size: self.size
+                    pos: self.pos
                     canvas.before:
                         Color:
-                            rgba: .3, .3, .3, .9
+                            rgba: 1, 1, 1, .75
+                    size_hint_x: .95
+            BoxLayout:
+                size_hint_y: .075
+            BoxLayout:
+                size_hint_y: .85
+                Label:
+                    size_hint_x: .075
+                BoxLayout:
+                    orientation: 'vertical'
+                    canvas.before:
+                        Color:
+                            rgba: .3, .3, .3, .7
                         Rectangle:
                             size: self.size
                             pos: self.pos
-                    id: _activity_img
-
-            ProfileImage:
-                id: _pi
-                size: self.size
-                pos: self.pos
-                canvas.before:
-                    Color:
-                        rgba: 1, 1, 1, .75
-                size_hint_x: .95
-        BoxLayout:
-            size_hint_y: .075
-        BoxLayout:
-            size_hint_y: .85
-            Label:
-                size_hint_x: .075
+                        Line:
+                            width: 3.25
+                            rectangle: self.x, self.y, self.width, self.height
+                    BoxLayout:
+                        id: _profile
+                        orientation: 'vertical'
+                    BoxLayout:
+                        size_hint_y: .2
+                        Widget:
+                        HomeScreenButton:
+                            text: 'Change Profile'
+                            size_hint_x: .225
+                            on_release: self.change_profile()
+                Label:
+                    size_hint_x: .03
+            Widget:
+                size_hint_y: .04
             BoxLayout:
-                orientation: 'vertical'
-                canvas.before:
-                    Color:
-                        rgba: .3, .3, .3, .7
-                    Rectangle:
-                        size: self.size
-                        pos: self.pos
-                    Line:
-                        width: 3.25
-                        rectangle: self.x, self.y, self.width, self.height
+                size_hint_y: .2
+                Widget:
                 BoxLayout:
-                    id: _profile
-                    orientation: 'vertical'
-                BoxLayout:
-                    size_hint_y: .2
-                    Widget:
+                    size_hint_x: .375
+                    spacing: 20
+                    HomeScreenButton
+                        text: 'View Receipt'
+                        on_release: self.view_receipt()
                     HomeScreenButton:
-                        text: 'Change Profile'
-                        size_hint_x: .225
-                        on_release: self.change_profile()
-            Label:
-                size_hint_x: .03
-        Widget:
-            size_hint_y: .04
-        BoxLayout:
-            size_hint_y: .2
-            Widget:
-            BoxLayout:
-                size_hint_x: .375
-                spacing: 20
-                HomeScreenButton
-                    text: 'View Receipt'
-                    on_release: self.view_receipt()
-                HomeScreenButton:
-                    text: 'Change Password'
-                    on_release: self.change_password()
-            Widget:
-                size_hint_x: .0275
-        Widget
-            size_hint_y: .04
+                        text: 'Change Password'
+                        on_release: self.change_password()
+                Widget:
+                    size_hint_x: .0275
+            Widget
+                size_hint_y: .04
 
 
 

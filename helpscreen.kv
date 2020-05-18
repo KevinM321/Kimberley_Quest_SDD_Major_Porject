@@ -1,0 +1,21 @@
+<HelpScreenLayout>
+    BoxLayout:
+        orientation: 'vertical'
+        Widget:
+            size_hint_y: .15
+        BoxLayout:
+            Widget:
+                size_hint_x: .15
+            BoxLayout:
+                Button:
+            Widget:
+                size_hint_x: .15
+        Widget:
+            size_hint_y: .15
+
+<HelpScreen@Screen>:
+    name: 'help_screen'
+    screen_manager: self.screen_manager
+
+    HelpScreenLayout:
+        screen_manager: root.screen_manager

@@ -1,4 +1,5 @@
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.button import Button
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
 from kivy.uix.popup import Popup
@@ -28,10 +29,11 @@ about_cuisine = "Cuisine on board Kimberley Quest II is simply delicious.\n" \
                 "beverages can be pre-ordered prior to your departures. BYO is also an option."
 
 
-class MealScreenLayout(BoxLayout):
+class MealScreenLayout(RelativeLayout):
 
     def __init__(self, **kwargs):
         super(MealScreenLayout, self).__init__(**kwargs)
+        MealScreenLayout.body = self
 
     @staticmethod
     def info_popup():

@@ -8,6 +8,8 @@ from homescreen import *
 from activityscreen import *
 from locationscreen import *
 from mealscreen import *
+from registerscreen import *
+from helpscreen import *
 
 import kivy
 # from kivy.core.window import Window
@@ -28,26 +30,31 @@ Builder.load_file('homescreen.kv')
 Builder.load_file('activityscreen.kv')
 Builder.load_file('locationscreen.kv')
 Builder.load_file('mealscreen.kv')
+Builder.load_file('registerscreen.kv')
+Builder.load_file('helpscreen.kv')
 
 
 class KQScreenManager(ScreenManager):
 
     def on_current(self, instance, value):
         super(KQScreenManager, self).on_current(instance, value)
-        system_popup = ErrorPopup()
         if value == 'activity_screen':
-            LoginScreenLayout.body.remove_widget(system_popup)
-            ActivityScreenLayout.body.add_widget(system_popup)
+            del ErrorPopup.single
+            ActivityScreenLayout.body.add_widget(ErrorPopup())
             ActivityScreenLayout.body.load(day=str(ActivityScreenLayout.body.today))
         if value == 'login_screen':
-            LoginScreenLayout.body.add_widget(system_popup)
+            LoginScreenLayout.body.add_widget(ErrorPopup())
         if value == 'meal_screen':
+            del ErrorPopup.single
+            MealScreenLayout.body.add_widget(ErrorPopup())
             for each in MealPanelItem.get_widgets('panel'):
                 Clock.schedule_once(lambda dt: each.update_menu(), .5)
                 if each.text == MealPanelItem.selected:
                     selected = each
             Clock.schedule_once(lambda dt: selected.update_menu(), .5)
         if value == 'home_screen':
+            del ErrorPopup.single
+            HomeScreenLayout.body.add_widget(ErrorPopup())
             HomeScreenLayout.body.update_activity_today()
 
 

@@ -3,7 +3,7 @@ from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from tinydb import TinyDB, Query
-from kivy.uix.screenmanager import FadeTransition
+from kivy.uix.screenmanager import FadeTransition, CardTransition
 from passlib.hash import pbkdf2_sha256
 from kivy.clock import Clock
 from kivy.uix.image import Image
@@ -23,11 +23,26 @@ class LoginScreenLayout(RelativeLayout):
         super(LoginScreenLayout, self).__init__(**kwargs)
         LoginScreenLayout.body = self
         Clock.schedule_once(lambda dt: OpenAnimation.body.animate(), 3)
+        Clock.schedule_once(lambda dt: self.body.login_box.register_button.bind(on_release=self.to_register), .25)
+        self.ls_animation = ''
+        self.rs_animation = ''
+
+    def to_register(self, args):
+        self.ls_animation = Animation(x=-1250, duration=0.75)
+        self.rs_animation = Animation(x=0, duration=0.75)
+        self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
+        self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
+
+    def to_login(self):
+        self.ls_animation = Animation(x=0, duration=0.75)
+        self.rs_animation = Animation(x=1250, duration=0.75)
+        self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
+        self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
 
     def login(self):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
-        self.login_box.usr_name_input.input_box.text = 'LuffyM9'
-        self.login_box.psw_input.input_box.text = '1234'
+        # self.login_box.usr_name_input.input_box.text = 'LuffyM9'
+        # self.login_box.psw_input.input_box.text = '1234'
         LoginScreenLayout.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
         if LoginScreenLayout.body.account:
             if self.login_box.psw_input.input_box.text:
@@ -72,6 +87,7 @@ class LoginScreenLayout(RelativeLayout):
 class ErrorPopup(RelativeLayout):
 
     single = None
+    widgets = 0
 
     def __init__(self, **kwargs):
         if 'name' in kwargs:
@@ -81,15 +97,20 @@ class ErrorPopup(RelativeLayout):
 
     @classmethod
     def display(cls, text):
-        if not cls.single.children:
-            popup = ErrorLabel(text=text,
-                               pos=(1050, 650),
-                               size_hint=(None, None),
-                               size=(500, 125))
-            cls.single.add_widget(popup)
+        popup = ErrorLabel(text=text,
+                           pos=(1050, (650 - cls.widgets*125)),
+                           size_hint=(None, None),
+                           size=(500, 125))
+        cls.single.add_widget(popup)
+        if cls.widgets != 2:
+            cls.widgets += 1
         else:
-            cls.single.clear_widgets()
-            cls.single.display(text)
+            cls.widgets = 0
+        Clock.schedule_once(lambda dt: ErrorPopup.single.remove_widget(popup), 4.5)
+
+    def remove_widget(self, widget):
+        super(ErrorPopup, self).remove_widget(widget)
+        ErrorPopup.widgets = 0
 
 
 class ErrorLabel(Label):
@@ -97,7 +118,7 @@ class ErrorLabel(Label):
     def __init__(self, **kwargs):
         super(ErrorLabel, self).__init__(**kwargs)
         self.animation = ''
-        self.move_left()
+        Clock.schedule_once(lambda dt: self.move_left(), .5*ErrorPopup.widgets)
 
     def move_left(self):
         self.animation = Animation(x=565, duration=0.75)
@@ -109,7 +130,7 @@ class ErrorLabel(Label):
         self.animation.start(self)
 
     def wait(self):
-        Clock.schedule_once(lambda dt: self.move_right())
+        self.move_right()
 
 
 class OpenAnimation(Image):

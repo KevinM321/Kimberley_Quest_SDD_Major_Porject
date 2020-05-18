@@ -4,8 +4,8 @@
       "username": "PeterS1",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
       "start_date": "05-05-20",
-      "day": "",
-      "menu": ""
+      "day": "14",
+      "menu": "4"
     },
     "2": {
       "username": "Le-AnneS1",
@@ -95,8 +95,8 @@
       "username": "LuffyM9",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
       "start_date": "11-05-20",
-      "day": "5",
-      "menu": "1"
+      "day": "6",
+      "menu": "3"
     },
     "15": {
       "username": "ShanksP9",

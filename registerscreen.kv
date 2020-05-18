@@ -1,0 +1,131 @@
+<RegisterInputBox@BoxLayout>:
+    text_input: _text_input
+    l_text: ''
+    password: False
+    Label:
+        color: 0, 0, 0, 1
+        bold: True
+        font_size: 20
+        text: root.l_text
+    TextInput:
+        id: _text_input
+        multiline: False
+        write_tab: False
+        hint_text: '(required)'
+        padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+        cursor_color: 0, 0, 0, 1
+        password: root.password
+    Widget:
+        size_hint_x: .125
+
+<RegisterScreenLayout>:
+    register_input: _register_input
+    BoxLayout:
+        Widget:
+            size_hint_x: .6
+
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                bold: True
+                text: 'Register Account'
+                font_size: 37.5
+                color: .1, .1, 1, 1
+                size_hint_y: .175
+            BoxLayout:
+                id: _register_input
+                orientation: 'vertical'
+                canvas.before:
+                    Color:
+                        rgba: .4, .4, .4, .8
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                spacing: 12.5
+                Widget:
+                    size_hint_y: .05
+                BoxLayout:
+                    text_input1: _text_input1
+                    text_input2: _text_input2
+                    size_hint_y: .2
+                    l_text: 'Name:'
+                    Label:
+                        color: 0, 0, 0, 1
+                        font_size: 20
+                        bold: True
+                        text: self.parent.l_text
+                    BoxLayout:
+                        TextInput:
+                            id: _text_input1
+                            padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                            color: 0, 0, 0, 1
+                            hint_text: 'First name(required)'
+                            cursor_color: 0, 0, 0, 1
+                            multiline: False
+                            write_tab: False
+                        Widget:
+                            size_hint_x: .1
+                        TextInput:
+                            id: _text_input2
+                            padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                            color: 0, 0, 0, 1
+                            hint_text: 'Last name(required)'
+                            cursor_color: 0, 0, 0, 1
+                            multiline: False
+                            write_tab: False
+                    Widget:
+                        size_hint_x: .125
+                RegisterInputBox:
+                    size_hint_y: .2
+                    l_text: 'Age:'
+                RegisterInputBox:
+                    size_hint_y: .2
+                    l_text: 'Sex:'
+                RegisterInputBox:
+                    size_hint_y: .2
+                    l_text: 'Cabin Number:'
+                RegisterInputBox:
+                    size_hint_y: .2
+                    l_text: 'Mailing Address:'
+                BoxLayout:
+                    text_input: _text_input
+                    l_text: 'Special Notes:'
+                    size_hint_y: .5
+                    Label:
+                        color: 0, 0, 0, 1
+                        bold: True
+                        font_size: 20
+                        text: self.parent.l_text
+                    TextInput:
+                        id: _text_input
+                        multiline: False
+                        write_tab: False
+                        cursor_color: 0, 0, 0, 1
+                    Widget:
+                        size_hint_x: .125
+                Label:
+                    size_hint_y: .125
+                    text: 'Note:    Account name will be generated from your first name, last name and cabin number'
+            Widget:
+                size_hint_y: .05
+            BoxLayout:
+                size_hint_y: .1
+                spacing: 100
+                Widget:
+                    size_hint_x: .15
+                Button:
+                    text: 'Confirm'
+                    bold: True
+                    font_size: 20
+                    on_release: root.confirm()
+                Button:
+                    text: 'Cancel'
+                    bold: True
+                    font_size: 21.25
+                    on_release: root.cancel()
+                Widget:
+                    size_hint_x: .15
+            Widget:
+                size_hint_y: .1
+        Widget:
+            size_hint_x: .6

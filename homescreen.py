@@ -1,14 +1,14 @@
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
-from kivy.uix.scrollview import ScrollView
 import loginscreen
 import activityscreen
 
 
-class HomeScreenLayout(BoxLayout):
+class HomeScreenLayout(RelativeLayout):
 
     def __init__(self, **kwargs):
         super(HomeScreenLayout, self).__init__(**kwargs)
@@ -63,11 +63,14 @@ class SideBar(BoxLayout):
 
 class KimberleyInfo(Button):
 
+    last_screen = ''
+
     def __init__(self, **kwargs):
         super(KimberleyInfo, self).__init__(**kwargs)
 
     def on_release(self):
-        pass
+        self.last_screen = HomeScreenLayout.body.screen_manager.current
+        HomeScreenLayout.body.screen_manager.current = 'help_screen'
 
 
 class ProfileInfo(BoxLayout):
