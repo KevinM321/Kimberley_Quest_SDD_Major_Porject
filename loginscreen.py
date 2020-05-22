@@ -3,7 +3,7 @@ from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from tinydb import TinyDB, Query
-from kivy.uix.screenmanager import FadeTransition, CardTransition
+from kivy.uix.screenmanager import FadeTransition
 from passlib.hash import pbkdf2_sha256
 from kivy.clock import Clock
 from kivy.uix.image import Image
@@ -102,7 +102,7 @@ class ErrorPopup(RelativeLayout):
                            size_hint=(None, None),
                            size=(500, 125))
         cls.single.add_widget(popup)
-        if cls.widgets != 2:
+        if cls.widgets != 1:
             cls.widgets += 1
         else:
             cls.widgets = 0
@@ -118,7 +118,7 @@ class ErrorLabel(Label):
     def __init__(self, **kwargs):
         super(ErrorLabel, self).__init__(**kwargs)
         self.animation = ''
-        Clock.schedule_once(lambda dt: self.move_left(), .5*ErrorPopup.widgets)
+        Clock.schedule_once(lambda dt: self.move_left(), .25)
 
     def move_left(self):
         self.animation = Animation(x=565, duration=0.75)

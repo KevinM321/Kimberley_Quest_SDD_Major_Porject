@@ -1,17 +1,30 @@
 <HelpScreenLayout>
     BoxLayout:
+        canvas.before:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: 'res/system/white_background.jpg'
         orientation: 'vertical'
         Widget:
-            size_hint_y: .15
+            size_hint_y: .25
         BoxLayout:
+            size_hint_y: .7
             Widget:
-                size_hint_x: .15
             BoxLayout:
+                size_hint_x: .7
+                orientation: 'vertical'
+                spacing: 70
+                Button:
+                    text: 'Activity Selection'
+                Button:
+                    text: 'Mean Selection'
+                Button:
+
                 Button:
             Widget:
-                size_hint_x: .15
         Widget:
-            size_hint_y: .15
+            size_hint_y: .25
 
 <HelpScreen@Screen>:
     name: 'help_screen'

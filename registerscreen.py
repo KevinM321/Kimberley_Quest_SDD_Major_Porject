@@ -2,7 +2,7 @@ from kivy.uix.relativelayout import RelativeLayout
 import loginscreen
 import re
 
-string_pattern = r"^[A-Za-z]+$"
+string_pattern = r"[A-Za-z]+$"
 number_pattern = r"[0-9]+$"
 
 
@@ -32,12 +32,17 @@ class RegisterScreenLayout(RelativeLayout):
                     required_empty = True
                 if each == 'name':
                     if register_info[each] != ' ':
-                        if not re.match(string_pattern, ''.join(register_info[each].split(' '))):
+                        if not (re.match(string_pattern, register_info[each].split(' ')[0]) and
+                                re.match(string_pattern, register_info[each].split(' ')[1])):
                             incorrect = True
                             invalid_name = True
                 if each == 'age':
                     if register_info[each]:
-                        if not re.match(number_pattern, register_info[each]):
+                        if re.match(number_pattern, register_info[each]):
+                            if int(register_info[each]) > 100:
+                                incorrect = True
+                                invalid_age = True
+                        else:
                             incorrect = True
                             invalid_age = True
         if not incorrect:
