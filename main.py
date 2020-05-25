@@ -48,10 +48,10 @@ class KQScreenManager(ScreenManager):
             del ErrorPopup.single
             MealScreenLayout.body.add_widget(ErrorPopup())
             for each in MealPanelItem.get_widgets('panel'):
-                Clock.schedule_once(lambda dt: each.update_menu(), .5)
+                Clock.schedule_once(lambda dt: each.update_menu(),.1)
                 if each.text == MealPanelItem.selected:
                     selected = each
-            Clock.schedule_once(lambda dt: selected.update_menu(), .5)
+            Clock.schedule_once(lambda dt: selected.update_menu(), .125)
         if value == 'home_screen':
             del ErrorPopup.single
             HomeScreenLayout.body.add_widget(ErrorPopup())

@@ -75,13 +75,13 @@ class LoginScreenLayout(RelativeLayout):
                     homescreen.HomeScreenLayout.body.update_profile(self.body.user)
                     homescreen.SideBar.display_date(activityscreen_body.today)
                 else:
-                    ErrorPopup.display('Incorrect password')
+                    ErrorPopup.display('Incorrect password', '')
             else:
-                ErrorPopup.display('Password is empty')
+                ErrorPopup.display('Password is empty', '')
         elif self.login_box.usr_name_input.input_box.text == '':
-            ErrorPopup.display('Username is empty')
+            ErrorPopup.display('Username is empty', '')
         else:
-            ErrorPopup.display('Username does not exist')
+            ErrorPopup.display('Username does not exist', '')
 
 
 class ErrorPopup(RelativeLayout):
@@ -96,13 +96,15 @@ class ErrorPopup(RelativeLayout):
         ErrorPopup.single = self
 
     @classmethod
-    def display(cls, text):
-        popup = ErrorLabel(text=text,
-                           pos=(1050, (650 - cls.widgets*125)),
+    def display(cls, text, subtext):
+        popup = ErrorLabel(pos=(1050, (700 - cls.widgets*125)),
                            size_hint=(None, None),
                            size=(500, 125))
+        popup.error_text.text = text
+        if subtext:
+            popup.sub_text.text = subtext
         cls.single.add_widget(popup)
-        if cls.widgets != 1:
+        if cls.widgets != 2:
             cls.widgets += 1
         else:
             cls.widgets = 0
@@ -113,7 +115,7 @@ class ErrorPopup(RelativeLayout):
         ErrorPopup.widgets = 0
 
 
-class ErrorLabel(Label):
+class ErrorLabel(BoxLayout):
 
     def __init__(self, **kwargs):
         super(ErrorLabel, self).__init__(**kwargs)

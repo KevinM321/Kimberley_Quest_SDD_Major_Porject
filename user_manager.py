@@ -62,5 +62,6 @@ class User:
         name = self.extract_profile()['name']
         user_profile.update(info, user_query.name == name)
 
-    def register(self):
+    @staticmethod
+    def register(info):
         pass

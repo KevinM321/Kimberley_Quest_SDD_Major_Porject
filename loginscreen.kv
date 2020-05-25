@@ -74,14 +74,27 @@
     pos_hint: {'center_x': .8}
 
 <ErrorLabel>
+    orientation: 'vertical'
+    error_text: _error_text
+    sub_text: _sub_text
     canvas.before:
         Rectangle:
             size: self.size
             pos: self.pos
             source: 'res/system/white_background.jpg'
-    color: 0, 0, 0, 1
-    font_size: 32.5
-    bold: True
+    Label:
+        color: 0, 0, 0, 1
+        font_size: 32.5
+        bold: True
+        id: _error_text
+    Label:
+        id: _sub_text
+        size_hint_y: None
+        height: 10
+        color: 0, 0, 0, 1
+    Widget:
+        size_hint_y: None
+        height: 25
 
 
 <LoginScreenLayout>

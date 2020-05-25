@@ -76,6 +76,17 @@
                     Widget:
                         size_hint_x: .125
                 RegisterInputBox:
+                    l_text: 'Password'
+                    password: True
+                    size_hint_y: .3
+                    Button:
+                        text: 'Show'
+                        left: self.right
+                        on_release:
+                            self.text = "Hide" if self.text == "Show" else "Show"
+                            self.parent.password = self.text == "Show"
+                        size_hint_x: .3
+                RegisterInputBox:
                     size_hint_y: .2
                     l_text: 'Age:'
                 RegisterInputBox:

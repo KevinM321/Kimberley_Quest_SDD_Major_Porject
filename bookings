@@ -72,7 +72,7 @@
         },
         "4": {
           "Breakfast": {
-            "main_meal": "",
+            "main_meal": "Chocolate Chip Pancakes (Vegetarian)",
             "snacks": "",
             "drinks": ""
           },
@@ -82,8 +82,8 @@
             "drinks": ""
           },
           "Dinner": {
-            "main_meal": "",
-            "snacks": "",
+            "main_meal": "Grilled Barramundi",
+            "snacks": "Assorted Nuts",
             "drinks": ""
           }
         },

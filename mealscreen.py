@@ -128,7 +128,10 @@ class MealPanelItem(TabbedPanelItem):
                 for e in section:
                     if e.name.text == selected[num]:
                         if e.checkbox_group.state != 'down':
+                            print('no')
                             e.checkbox_group.state = 'down'
+                    else:
+                        e.checkbox_group.state = 'normal'
                 num += 1
 
     def on_release(self, *largs):
