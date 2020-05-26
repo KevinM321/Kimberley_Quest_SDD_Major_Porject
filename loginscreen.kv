@@ -19,6 +19,23 @@
         cursor_color: 0, 0, 0, 1
         password: root.password
 
+<RegisterSuccessfulLayout>
+    username: _username
+    orientation: 'vertical'
+    spacing: 15
+    Label:
+        size_hint_y: .2
+        text: 'Your Username Will Be:'
+        text_size: self.size
+        valign: 'bottom'
+        halign: 'center'
+        font_size: 20
+    Label:
+        id: _username
+        font_size: 35
+        bold: True
+
+
 <OpenAnimation>
     size_hint: None, None
     size: 375, 250

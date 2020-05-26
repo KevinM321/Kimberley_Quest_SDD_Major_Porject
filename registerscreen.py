@@ -15,15 +15,23 @@ class RegisterScreenLayout(RelativeLayout):
 
     def confirm(self):
         register_info = {}
-        input_box = self.register_input.children[1:7]
+        input_box = self.register_input.children[1:8]
         input_box.reverse()
         incorrect = False
         invalid_name = False
         required_empty = False
         invalid_age = False
+        invalid_password = False
         for each in input_box:
             if each.l_text[:-1] == 'Name':
                 register_info[each.l_text[:-1].lower()] = (each.text_input1.text, each.text_input2.text)
+            elif each.l_text[:-1] == 'Sex':
+                for i in each.sex_button.children:
+                    if i.state == 'down':
+                        selected = i
+                register_info[each.l_text[:-1].lower()] = selected.text.lower()
+            elif each.l_text[:-1] == 'Password':
+                register_info[each.l_text[:-1].lower()] = each.psw_input.text
             else:
                 register_info[each.l_text[:-1].lower()] = each.text_input.text
         for each in register_info:
@@ -39,6 +47,10 @@ class RegisterScreenLayout(RelativeLayout):
                                 re.match(string_pattern, register_info[each][1])):
                             incorrect = True
                             invalid_name = True
+                if each == 'password':
+                    if ' ' in register_info[each]:
+                        incorrect = True
+                        invalid_password = True
                 if each == 'age':
                     if register_info[each]:
                         if re.match(number_pattern, register_info[each]):
@@ -49,13 +61,13 @@ class RegisterScreenLayout(RelativeLayout):
                             incorrect = True
                             invalid_age = True
         if not incorrect:
-            loginscreen.LoginScreenLayout.body.to_login()
-            user_manager.User.register(register_info)
-            return
+            loginscreen.LoginScreenLayout.body.to_login(user_manager.User.register(register_info))
         if invalid_name:
             loginscreen.ErrorPopup.display('Name invalid', '')
         if invalid_age:
             loginscreen.ErrorPopup.display('Age invalid', 'must be less than 125')
+        if invalid_password:
+            loginscreen.ErrorPopup.display('Password invalid', '')
         if required_empty:
             loginscreen.ErrorPopup.display('Please fill in all required', '')
 

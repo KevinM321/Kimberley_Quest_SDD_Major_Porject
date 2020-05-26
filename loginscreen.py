@@ -1,7 +1,9 @@
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.relativelayout import RelativeLayout
+from kivy.properties import StringProperty
 from kivy.uix.button import Button
 from kivy.uix.label import Label
+from kivy.uix.popup import Popup
 from tinydb import TinyDB, Query
 from kivy.uix.screenmanager import FadeTransition
 from passlib.hash import pbkdf2_sha256
@@ -33,11 +35,13 @@ class LoginScreenLayout(RelativeLayout):
         self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
         self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
 
-    def to_login(self):
+    def to_login(self, username):
         self.ls_animation = Animation(x=0, duration=0.75)
         self.rs_animation = Animation(x=1250, duration=0.75)
         self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
         self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
+        Popup(title='Register Successful',
+              content=RegisterSuccessfulLayout(username=username)).open()
 
     def login(self):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
@@ -82,6 +86,16 @@ class LoginScreenLayout(RelativeLayout):
             ErrorPopup.display('Username is empty', '')
         else:
             ErrorPopup.display('Username does not exist', '')
+
+
+class RegisterSuccessfulLayout(BoxLayout):
+
+    username = StringProperty()
+
+    def __init__(self, **kwargs):
+        super(RegisterSuccessfulLayout, self).__init__(**kwargs)
+        username = kwargs.pop('username')
+        self.username.text = username
 
 
 class ErrorPopup(RelativeLayout):

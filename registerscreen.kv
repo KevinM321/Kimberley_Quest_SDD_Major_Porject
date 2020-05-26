@@ -23,7 +23,6 @@
     BoxLayout:
         Widget:
             size_hint_x: .6
-
         BoxLayout:
             orientation: 'vertical'
             Label:
@@ -75,23 +74,59 @@
                             write_tab: False
                     Widget:
                         size_hint_x: .125
-                RegisterInputBox:
-                    l_text: 'Password'
+                BoxLayout:
+                    psw_input: _psw_input
+                    l_text: 'Password:'
                     password: True
-                    size_hint_y: .3
-                    Button:
-                        text: 'Show'
-                        left: self.right
-                        on_release:
-                            self.text = "Hide" if self.text == "Show" else "Show"
-                            self.parent.password = self.text == "Show"
-                        size_hint_x: .3
+                    size_hint_y: .2
+                    Label:
+                        color: 0, 0, 0, 1
+                        bold: True
+                        font_size: 20
+                        text: self.parent.l_text
+                    BoxLayout:
+                        TextInput:
+                            id: _psw_input
+                            multiline: False
+                            write_tab: False
+                            hint_text: '(required)'
+                            padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
+                            cursor_color: 0, 0, 0, 1
+                            password: self.parent.parent.password
+                        Button:
+                            text: 'Show'
+                            left: self.right
+                            on_release:
+                                self.text = "Hide" if self.text == "Show" else "Show"
+                                self.parent.parent.password = self.text == "Show"
+                            size_hint_x: .2
+                    Widget:
+                        size_hint_x: .125
                 RegisterInputBox:
                     size_hint_y: .2
                     l_text: 'Age:'
-                RegisterInputBox:
-                    size_hint_y: .2
+                BoxLayout:
+                    sex_button: _sex_button
                     l_text: 'Sex:'
+                    size_hint_y: .2
+                    Label:
+                        color: 0, 0, 0, 1
+                        bold: True
+                        font_size: 20
+                        text: self.parent.l_text
+                    BoxLayout:
+                        id: _sex_button
+                        ToggleButton:
+                            group: 'sex'
+                            text: 'Male'
+                            state: 'down'
+                            allow_no_selection: False
+                        ToggleButton:
+                            group: 'sex'
+                            text: 'Female'
+                            allow_no_selection: False
+                    Widget:
+                        size_hint_x: .125
                 RegisterInputBox:
                     size_hint_y: .2
                     l_text: 'Cabin Number:'

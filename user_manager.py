@@ -1,11 +1,30 @@
 from tinydb import TinyDB, Query
 from datetime import date, datetime
+from passlib.hash import pbkdf2_sha256
 import activityscreen
 
 user_query = Query()
 user_bookings = TinyDB('bookings', indent=2)
 user_account = TinyDB('account', indent=2)
 user_profile = TinyDB('profile', indent=2)
+
+meal_day = {
+           "Breakfast": {
+             "main_meal": "",
+             "snacks": "",
+             "drinks": ""
+           },
+           "Lunch": {
+             "main_meal": "",
+             "snacks": "",
+             "drinks": ""
+           },
+           "Dinner": {
+             "main_meal": "",
+             "snacks": "",
+             "drinks": ""
+           }
+          }
 
 
 class User:
@@ -64,4 +83,24 @@ class User:
 
     @staticmethod
     def register(info):
-        pass
+        f_name, l_name = info['name']
+        profile = info
+        account = {'username': (f_name.capitalize() + l_name[0].upper() + info['cabin number']),
+                   'password': pbkdf2_sha256.hash(info['password']),
+                   'start_date': "",
+                   'day': "",
+                   'menu': ""}
+        profile.pop('password')
+        profile['name'] = f_name.capitalize() + ' ' + l_name.capitalize()
+        activities = {}
+        meals = {}
+        for i in range(1, 15):
+            activities[str(i)] = ""
+            meals[str(i)] = meal_day
+        bookings = {'username': account['username'],
+                    'activities': activities,
+                    'meals': meals}
+        # user_profile.insert(profile)
+        # user_account.insert(account)
+        # user_bookings.insert(bookings)
+        return account['username']
