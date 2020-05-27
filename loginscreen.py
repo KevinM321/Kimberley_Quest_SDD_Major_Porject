@@ -66,7 +66,6 @@ class LoginScreenLayout(RelativeLayout):
             if self.login_box.psw_input.input_box.text:
                 if pbkdf2_sha256.verify(self.login_box.psw_input.input_box.text,
                                         LoginScreenLayout.body.account[0]['password']):
-                    self.screen_manager.transition = FadeTransition()
                     self.body.user = user_manager.User(self.login_box.usr_name_input.input_box.text)
                     day_passed = LoginScreenLayout.body.user.extract_date()
                     if day_passed == '1':
@@ -75,10 +74,23 @@ class LoginScreenLayout(RelativeLayout):
                     else:
                         activityscreen_body.today = str(day_passed + 1)
                         activityscreen_body.chosen_day = str(day_passed + 1)
+                        if (day_passed + 1) > 14:
+                            Popup(title='Kimberley Quest',
+                                  content=Label(text='Your Trip Has Ended',
+                                                font_size=35,
+                                                bold=True,
+                                                color=(0, 0, 0, 1)),
+                                  separator_color=(.1, .1, 1, .775),
+                                  title_size=30,
+                                  size_hint=(.4, .5),
+                                  title_color=(0, 0, 0, 1),
+                                  background='res/system/white_background.jpg').open()
+                            return
                     activityscreen.ActivityMainScreen.body.chosen_day.text = 'Day ' + activityscreen_body.chosen_day
                     activityscreen.ActivityMainScreen.body.today.text = 'Day ' + activityscreen_body.today
                     self.login_box.usr_name_input.input_box.text = ''
                     self.login_box.psw_input.input_box.text = ''
+                    self.screen_manager.transition = FadeTransition()
                     self.screen_manager.current = 'home_screen'
                     account = accounts.search(Query().username == LoginScreenLayout.body.user.username)[0]
                     if account['day'] == activityscreen_body.today:

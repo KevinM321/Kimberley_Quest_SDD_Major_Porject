@@ -28,8 +28,49 @@
         padding_y: [self.height / 2.0 - (self.line_height / 2.0) * len(self._lines), 0]
         cursor_color: 0, 0, 0, 1
         password: root.password
-    Widget:
 
+<ChangePasswordLayout>
+    orientation: 'vertical'
+    confirm_button: _confirm_button
+    cancel_button: _cancel_button
+    Widget:
+        size_hint_y: .1
+    ProfileInputBox:
+        spacing: 50
+        password: True
+        size_hint_y: .2
+        l_width: 300
+        l_text: 'Original Password:'
+        Button:
+            text: 'Show'
+            left: self.right
+            on_release:
+                self.text = "Hide" if self.text == "Show" else "Show"
+                self.parent.password = self.text == "Show"
+            size_hint_x: .2
+    ProfileInputBox:
+        spacing: 50
+        password: True
+        size_hint_y: .2
+        l_width: 300
+        l_text: 'New Password:'
+        Button:
+            text: 'Show'
+            left: self.right
+            on_release:
+                self.text = "Hide" if self.text == "Show" else "Show"
+                self.parent.password = self.text == "Show"
+            size_hint_x: .2
+    BoxLayout:
+        size_hint_y: .15
+        Button:
+            id: _confirm_button
+            text: 'Confirm'
+        Button:
+            text: 'Cancel'
+            id: _cancel_button
+    Widget:
+        size_hint_y: .1
 <ChangeProfileLayout>
     cancel_button: _cancel_button
     confirm_button: _confirm_button
@@ -41,14 +82,17 @@
         size_hint_y: .35
         l_text: 'Age:'
         l_width: 125
+        Widget:
     ProfileInputBox:
         size_hint_y: .35
         l_text: 'Sex:'
         l_width: 125
+        Widget:
     ProfileInputBox:
         l_text: 'Mailing Address:'
         l_width: 300
         size_hint_y: .6
+        Widget:
     BoxLayout:
         text_input: _text_input
         l_text: 'Special Notes:'

@@ -6,6 +6,7 @@ from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
+import mealscreen
 import loginscreen
 import activityscreen
 
@@ -92,13 +93,30 @@ class ProfileInfo(BoxLayout):
 
 class HomeScreenButton(Button):
 
-    def change_password(self):
-        pass
+    @staticmethod
+    def change_password():
+        content = ChangePasswordLayout()
+        popup = Popup(size_hint=(.6, .6),
+                      separator_color=(.1, .1, 1, .775),
+                      content=content,
+                      title='Change Profile',
+                      title_size=30,
+                      title_color=(0, 0, 0, 1),
+                      pos_hint={'x': .3, 'y': .2},
+                      background='res/system/white_background.jpg',
+                      auto_dismiss=False)
+        content.cancel_button.bind(on_release=popup.dismiss)
+        content.confirm_button.bind(on_release=popup.dismiss)
+        popup.open()
 
     @staticmethod
     def logout():
         HomeScreenLayout.body.screen_manager.transition = FadeTransition()
         HomeScreenLayout.body.screen_manager.current = 'login_screen'
+        for each in mealscreen.MealPanelItem.get_widgets('panel'):
+            if each.text == 'Breakfast':
+                each.on_release()
+            each.remove_menu()
 
     @staticmethod
     def view_receipt():
@@ -149,6 +167,10 @@ class ReceiptLabel(Label):
 
 
 class ReceiptLayout(BoxLayout):
+    pass
+
+
+class ChangePasswordLayout(BoxLayout):
     pass
 
 

@@ -158,8 +158,8 @@
         "9": {
           "Breakfast": {
             "main_meal": "",
-            "snacks": "",
-            "drinks": ""
+            "snacks": "Ice Creams",
+            "drinks": "Coffee / Tea"
           },
           "Lunch": {
             "main_meal": "",
@@ -167,7 +167,7 @@
             "drinks": ""
           },
           "Dinner": {
-            "main_meal": "",
+            "main_meal": "Pappardelle Al Ragu",
             "snacks": "",
             "drinks": ""
           }
@@ -4165,7 +4165,7 @@
       "meals": {
         "1": {
           "Breakfast": {
-            "main_meal": "",
+            "main_meal": "Yogurt Granola Bowl (Vegetarian)",
             "snacks": "",
             "drinks": ""
           },

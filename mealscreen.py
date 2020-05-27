@@ -54,6 +54,7 @@ class MealPanelItem(TabbedPanelItem):
 
     def __init__(self, **kwargs):
         super(MealPanelItem, self).__init__(**kwargs)
+        MealPanelItem.body = self
         MealPanelItem.selected = 'Breakfast'
 
     def build_menu(self, menu):
@@ -80,6 +81,14 @@ class MealPanelItem(TabbedPanelItem):
             item.checkbox_group.group = 'drinks'
             self.meal_box.drinks.add_widget(item)
         MealPanelItem.body = self
+
+    def remove_menu(self):
+        for each in self.meal_box.main_meal.children[:-1]:
+            self.meal_box.main_meal.remove_widget(each)
+        for each in self.meal_box.snacks.children[:-1]:
+            self.meal_box.snacks.remove_widget(each)
+        for each in self.meal_box.drinks.children[:-1]:
+            self.meal_box.drinks.remove_widget(each)
 
     def update_selection(self):
         user = loginscreen.LoginScreenLayout.body.user
@@ -128,7 +137,6 @@ class MealPanelItem(TabbedPanelItem):
                 for e in section:
                     if e.name.text == selected[num]:
                         if e.checkbox_group.state != 'down':
-                            print('no')
                             e.checkbox_group.state = 'down'
                     else:
                         e.checkbox_group.state = 'normal'
