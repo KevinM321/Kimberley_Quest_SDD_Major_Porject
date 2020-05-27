@@ -20,21 +20,39 @@
         password: root.password
 
 <RegisterSuccessfulLayout>
-    username: _username
+    btn: _btn
+    usr_label: _usr_label
     orientation: 'vertical'
-    spacing: 15
-    Label:
+    Widget:
         size_hint_y: .2
+    Label:
+        color: 0, 0, 0, 1
+        size_hint_y: .35
         text: 'Your Username Will Be:'
-        text_size: self.size
-        valign: 'bottom'
-        halign: 'center'
         font_size: 20
     Label:
-        id: _username
+        size_hint_y: .325
+        color: 0, 0, 0, 1
+        id: _usr_label
         font_size: 35
         bold: True
-
+    Label:
+        text_size: self.size
+        valign: 'top'
+        halign: 'center'
+        size_hint_y: .1
+        text: '(Case Sensitive)'
+        color: 0, 0, 0, 1
+    Widget:
+        size_hint_y: .2
+    BoxLayout:
+        size_hint_y: .2
+        Widget:
+        Button:
+            id: _btn
+            text: 'Confirm'
+            size_hint_x: .4
+        Widget:
 
 <OpenAnimation>
     size_hint: None, None

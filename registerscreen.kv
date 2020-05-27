@@ -78,6 +78,7 @@
                     psw_input: _psw_input
                     l_text: 'Password:'
                     password: True
+                    psw_button: _psw_button
                     size_hint_y: .2
                     Label:
                         color: 0, 0, 0, 1
@@ -94,6 +95,7 @@
                             cursor_color: 0, 0, 0, 1
                             password: self.parent.parent.password
                         Button:
+                            id: _psw_button
                             text: 'Show'
                             left: self.right
                             on_release:

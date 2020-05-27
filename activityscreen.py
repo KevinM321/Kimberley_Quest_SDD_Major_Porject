@@ -146,6 +146,7 @@ class ActivityScreenLayout(RelativeLayout):
 
 
 class ActivityImage(ToggleButton):
+
     source = StringProperty()
 
     def __init__(self, **kwargs):

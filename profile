@@ -135,6 +135,22 @@
       "sex": "female",
       "special notes": "None",
       "mailing address": "40 Marsity Street, Htrae"
+    },
+    "18": {
+      "name": "Min Kevin",
+      "age": "17",
+      "sex": "male",
+      "cabin number": "11",
+      "mailing address": "sydney",
+      "special notes": "None"
+    },
+    "19": {
+      "name": "Ji Edward",
+      "age": "17",
+      "sex": "male",
+      "cabin number": "12",
+      "mailing address": "sydney",
+      "special notes": "None"
     }
   }
 }

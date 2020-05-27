@@ -1,5 +1,7 @@
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.relativelayout import RelativeLayout
+from kivy.uix.screenmanager import FadeTransition
+from kivy.clock import Clock
 from kivy.uix.image import Image
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
@@ -34,8 +36,10 @@ class HomeScreenLayout(RelativeLayout):
             for i in range(2):
                 section = ProfileInfo()
                 section.type.text = str(profile_info[index][0]).upper()
-                if str(profile_info[index][0]) == 'special notes':
-                    section.info.text = str(profile_info[index][1])
+                if str(profile_info[index][0]) == 'name':
+                    section.info.text = str(profile_info[index][1].split(' ')[1]) \
+                                        + ' ' + \
+                                        str(profile_info[index][1].split(' ')[0])
                 else:
                     section.info.text = str(profile_info[index][1])
                 row.add_widget(section)
@@ -44,7 +48,16 @@ class HomeScreenLayout(RelativeLayout):
 
 
 class ProfileImage(Image):
-    pass
+
+    def __init__(self, **kwargs):
+        super(ProfileImage, self).__init__(**kwargs)
+        ProfileImage.body = self
+
+    def build(self):
+        if loginscreen.LoginScreenLayout.body.user.sex == 'male':
+            self.source = 'res/system/male_profile.jpg'
+        else:
+            self.source = 'res/system/female_profile.jpg'
 
 
 class SideBar(BoxLayout):
@@ -81,6 +94,11 @@ class HomeScreenButton(Button):
 
     def change_password(self):
         pass
+
+    @staticmethod
+    def logout():
+        HomeScreenLayout.body.screen_manager.transition = FadeTransition()
+        HomeScreenLayout.body.screen_manager.current = 'login_screen'
 
     @staticmethod
     def view_receipt():

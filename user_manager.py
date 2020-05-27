@@ -33,6 +33,8 @@ class User:
         self.username = username
         self.bookings = user_bookings.search(user_query.username == self.username)
         self.account = user_account.search(user_query.username == self.username)
+        self.special_note = ''
+        self.sex = ''
 
     def extract_activity(self, day):
         bookings = self.bookings[0]['activities'][day]
@@ -71,6 +73,8 @@ class User:
             name = each['name'].split(' ')
             if (name[1] + name[0][0] + str(each['cabin number'])) == self.username:
                 user = each
+                self.special_note = user['special notes']
+                self.sex = user['sex']
                 return user
 
     def extract_activities(self):
@@ -91,7 +95,7 @@ class User:
                    'day': "",
                    'menu': ""}
         profile.pop('password')
-        profile['name'] = f_name.capitalize() + ' ' + l_name.capitalize()
+        profile['name'] = l_name.capitalize() + ' ' + f_name.capitalize()
         activities = {}
         meals = {}
         for i in range(1, 15):
@@ -100,7 +104,7 @@ class User:
         bookings = {'username': account['username'],
                     'activities': activities,
                     'meals': meals}
-        # user_profile.insert(profile)
-        # user_account.insert(account)
-        # user_bookings.insert(bookings)
+        user_profile.insert(profile)
+        user_account.insert(account)
+        user_bookings.insert(bookings)
         return account['username']

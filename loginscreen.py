@@ -40,20 +40,34 @@ class LoginScreenLayout(RelativeLayout):
         self.rs_animation = Animation(x=1250, duration=0.75)
         self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
         self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
-        Popup(title='Register Successful',
-              content=RegisterSuccessfulLayout(username=username)).open()
+        if username:
+            Clock.schedule_once(lambda dt: self.register_successful(username), 0.8)
+
+    @staticmethod
+    def register_successful(username):
+        content = RegisterSuccessfulLayout(username=username)
+        popup = Popup(title='Register Successful',
+                      content=content,
+                      separator_color=(.1, .1, 1, .775),
+                      title_size=30,
+                      size_hint=(.4, .5),
+                      title_color=(0, 0, 0, 1),
+                      background='res/system/white_background.jpg',
+                      auto_dismiss=False)
+        content.btn.bind(on_release=popup.dismiss)
+        popup.open()
 
     def login(self):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
-        # self.login_box.usr_name_input.input_box.text = 'LuffyM9'
+        # self.login_box.usr_name_input.input_box.text = 'PeterS1'
         # self.login_box.psw_input.input_box.text = '1234'
-        LoginScreenLayout.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
+        self.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
         if LoginScreenLayout.body.account:
             if self.login_box.psw_input.input_box.text:
                 if pbkdf2_sha256.verify(self.login_box.psw_input.input_box.text,
                                         LoginScreenLayout.body.account[0]['password']):
                     self.screen_manager.transition = FadeTransition()
-                    LoginScreenLayout.body.user = user_manager.User(self.login_box.usr_name_input.input_box.text)
+                    self.body.user = user_manager.User(self.login_box.usr_name_input.input_box.text)
                     day_passed = LoginScreenLayout.body.user.extract_date()
                     if day_passed == '1':
                         activityscreen_body.today = day_passed
@@ -77,6 +91,7 @@ class LoginScreenLayout(RelativeLayout):
                         for each in mealscreen.MealPanelItem.get_widgets('panel'):
                             each.build_menu(account['menu'])
                     homescreen.HomeScreenLayout.body.update_profile(self.body.user)
+                    homescreen.ProfileImage.body.build()
                     homescreen.SideBar.display_date(activityscreen_body.today)
                 else:
                     ErrorPopup.display('Incorrect password', '')
@@ -94,14 +109,12 @@ class RegisterSuccessfulLayout(BoxLayout):
 
     def __init__(self, **kwargs):
         super(RegisterSuccessfulLayout, self).__init__(**kwargs)
-        username = kwargs.pop('username')
-        self.username.text = username
+        self.usr_label.text = kwargs.pop('username')
 
 
 class ErrorPopup(RelativeLayout):
 
     single = None
-    widgets = 0
 
     def __init__(self, **kwargs):
         if 'name' in kwargs:
@@ -111,22 +124,13 @@ class ErrorPopup(RelativeLayout):
 
     @classmethod
     def display(cls, text, subtext):
-        popup = ErrorLabel(pos=(1050, (700 - cls.widgets*125)),
+        popup = ErrorLabel(pos=(1050, 700),
                            size_hint=(None, None),
                            size=(500, 125))
         popup.error_text.text = text
         if subtext:
             popup.sub_text.text = subtext
         cls.single.add_widget(popup)
-        if cls.widgets != 2:
-            cls.widgets += 1
-        else:
-            cls.widgets = 0
-        Clock.schedule_once(lambda dt: ErrorPopup.single.remove_widget(popup), 4.5)
-
-    def remove_widget(self, widget):
-        super(ErrorPopup, self).remove_widget(widget)
-        ErrorPopup.widgets = 0
 
 
 class ErrorLabel(BoxLayout):
