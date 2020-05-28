@@ -88,15 +88,14 @@ class ActivityScreenLayout(RelativeLayout):
             self.name.add_widget(Label(size_hint_x=0.01))
             self.info.add_widget(Label(size_hint_x=0.01))
             Clock.schedule_once(self.select_saved)
-            if loginscreen.LoginScreenLayout.body.user.extract_date() + 4 <= int(self.chosen_day):
+            if loginscreen.LoginScreenLayout.body.user.extract_date() + 4 > int(self.chosen_day):
                 Clock.schedule_once(self.display_end_booking)
             else:
-                for each in ActivityScreenLayout.body.children:
-                    if isinstance(each, loginscreen.ErrorPopup):
-                        if each.children:
-                            each.clear_widgets()
-                            each.canvas.remove(self.color)
-                            each.canvas.remove(self.no_activity)
+                error_popup = loginscreen.ErrorPopup.single
+                if error_popup.children:
+                    error_popup.clear_widgets()
+                    error_popup.canvas.remove(self.color)
+                    error_popup.canvas.remove(self.no_activity)
         else:
             if self.color and self.no_activity:
                 self.activities.clear_widgets()
@@ -109,22 +108,22 @@ class ActivityScreenLayout(RelativeLayout):
             if each.source == self.booked_activity:
                 each.state = 'down'
 
+    # delete existing on-screen reminder
     def delete_popup(self, *args):
         if self.color and self.no_activity:
-            for each in ActivityScreenLayout.body.children:
-                if isinstance(each, loginscreen.ErrorPopup):
-                    if each.children:
-                        each.canvas.remove(self.color)
-                        each.canvas.remove(self.no_activity)
-                        each.clear_widgets()
-                        self.color = ''
-                        self.no_activity = ''
-                    else:
-                        self.activities.canvas.remove(self.color)
-                        self.activities.canvas.remove(self.no_activity)
-                        self.color = ''
-                        self.no_activity = ''
-                        self.activities.clear_widgets()
+            error_popup = loginscreen.ErrorPopup.single
+            if error_popup.children:
+                error_popup.canvas.remove(self.color)
+                error_popup.canvas.remove(self.no_activity)
+                error_popup.clear_widgets()
+                self.color = ''
+                self.no_activity = ''
+            else:
+                self.activities.canvas.remove(self.color)
+                self.activities.canvas.remove(self.no_activity)
+                self.color = ''
+                self.no_activity = ''
+                self.activities.clear_widgets()
 
     def display_no_activity(self, *args):
         BookingButton.body.disabled = True
@@ -135,14 +134,13 @@ class ActivityScreenLayout(RelativeLayout):
         self.activities.add_widget(Label(text='NO ACTIVITIES TODAY'))
 
     def display_end_booking(self, *args):
-        for each in ActivityScreenLayout.body.children:
-            if isinstance(each, loginscreen.ErrorPopup):
-                self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
-                self.color = (Color(rgba=(.25, .25, .25, .7)))
-                each.canvas.add(self.color)
-                each.canvas.add(self.no_activity)
-                each.pos_hint = {'center_x': .5}
-                each.add_widget(Label(text='ACTIVITY BOOKING HAS ENDED', font_size=30, pos_hint={'center_x': .6}))
+        error_popup = loginscreen.ErrorPopup.single
+        self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
+        self.color = (Color(rgba=(.25, .25, .25, .7)))
+        error_popup.canvas.add(self.color)
+        error_popup.canvas.add(self.no_activity)
+        error_popup.pos_hint = {'center_x': .5}
+        error_popup.add_widget(Label(text='ACTIVITY BOOKING HAS ENDED', font_size=30, pos_hint={'center_x': .6}))
 
 
 class ActivityImage(ToggleButton):

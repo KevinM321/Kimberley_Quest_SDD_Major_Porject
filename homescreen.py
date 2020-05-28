@@ -47,6 +47,7 @@ class HomeScreenLayout(RelativeLayout):
                 row.add_widget(section)
                 index += 1
             self.profile.add_widget(row)
+        ProfileImage.body.build()
 
 
 class ProfileImage(Image):
@@ -215,7 +216,6 @@ class ChangeProfileLayout(BoxLayout):
         new_profile = {}
         for each in self.children[1:5]:
             if each.text_input.text:
-                pass
                 new_profile[each.l_text[:-1].lower()] = each.text_input.text
         if new_profile:
             loginscreen.LoginScreenLayout.body.user.update_profile(new_profile)

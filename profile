@@ -5,7 +5,7 @@
       "cabin number": 1,
       "age": 43,
       "sex": "male",
-      "special notes": "vegetarian food only",
+      "special notes": "None",
       "mailing address": "13 Wallaby Way, Port Jackson. NSW."
     },
     "2": {

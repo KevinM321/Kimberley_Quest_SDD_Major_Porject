@@ -16,8 +16,6 @@ import activityscreen
 import homescreen
 import mealscreen
 
-accounts = TinyDB('account', indent=2)
-
 
 class LoginScreenLayout(RelativeLayout):
 
@@ -61,6 +59,7 @@ class LoginScreenLayout(RelativeLayout):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
         # self.login_box.usr_name_input.input_box.text = 'PeterS1'
         # self.login_box.psw_input.input_box.text = '1234'
+        accounts = TinyDB('account', indent=2)
         self.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
         if LoginScreenLayout.body.account:
             if self.login_box.psw_input.input_box.text:
