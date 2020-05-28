@@ -81,8 +81,12 @@ class RegisterScreenLayout(RelativeLayout):
         elif required_empty:
             loginscreen.ErrorPopup.display('Please fill in all required', '')
         else:
-            loginscreen.LoginScreenLayout.body.to_login(user_manager.User.register(register_info))
-            RegisterScreenLayout.body.clear_inputs()
+            message = user_manager.User.register(register_info)
+            if message:
+                loginscreen.LoginScreenLayout.body.to_login(message)
+                RegisterScreenLayout.body.clear_inputs()
+            else:
+                loginscreen.ErrorPopup.display('Username already exists', '')
 
     @staticmethod
     def cancel():

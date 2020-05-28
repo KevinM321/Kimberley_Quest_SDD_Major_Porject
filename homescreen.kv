@@ -4,6 +4,21 @@
     bold: True
     size_hint_y: .1
 
+<WarningBox>
+    orientation: 'vertical'
+    warning_label: _warning_label
+    Widget:
+        size_hint_y: .4
+    Label:
+        size_hint_y: .325
+        color: 0, 0, 0, 1
+        id: _warning_label
+        font_size: 35
+        bold: True
+    Widget:
+        size_hint_y: .4
+
+
 <ProfileInputBox@BoxLayout>:
     spacing: 100
     text_input: _text_input
@@ -30,15 +45,18 @@
         password: root.password
 
 <ChangePasswordLayout>
+    new_psw: _new_psw
+    old_psw: _old_psw
     orientation: 'vertical'
+    spacing: 25
     confirm_button: _confirm_button
     cancel_button: _cancel_button
     Widget:
-        size_hint_y: .1
     ProfileInputBox:
-        spacing: 50
+        id: _old_psw
+        spacing: 55
         password: True
-        size_hint_y: .2
+        size_hint_y: .75
         l_width: 300
         l_text: 'Original Password:'
         Button:
@@ -48,10 +66,13 @@
                 self.text = "Hide" if self.text == "Show" else "Show"
                 self.parent.password = self.text == "Show"
             size_hint_x: .2
+        Widget:
+            size_hint_x: .05
     ProfileInputBox:
-        spacing: 50
+        id: _new_psw
+        spacing: 55
         password: True
-        size_hint_y: .2
+        size_hint_y: .75
         l_width: 300
         l_text: 'New Password:'
         Button:
@@ -61,16 +82,22 @@
                 self.text = "Hide" if self.text == "Show" else "Show"
                 self.parent.password = self.text == "Show"
             size_hint_x: .2
+        Widget:
+            size_hint_x: .05
     BoxLayout:
-        size_hint_y: .15
+        spacing: 50
+        size_hint_y: .6
+        Widget:
         Button:
             id: _confirm_button
             text: 'Confirm'
         Button:
             text: 'Cancel'
             id: _cancel_button
+        Widget:
     Widget:
-        size_hint_y: .1
+        size_hint_y: .8
+
 <ChangeProfileLayout>
     cancel_button: _cancel_button
     confirm_button: _confirm_button

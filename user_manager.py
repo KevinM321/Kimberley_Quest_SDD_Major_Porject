@@ -85,11 +85,18 @@ class User:
         name = self.extract_profile()['name']
         user_profile.update(info, user_query.name == name)
 
+    def update_password(self, psw):
+        self.account[0]['password'] = pbkdf2_sha256.hash(psw)
+        user_account.update(self.account[0], user_query.username == self.username)
+
     @staticmethod
     def register(info):
         f_name, l_name = info['name']
+        username = f_name.capitalize() + l_name[0].upper() + info['cabin number']
+        if user_account.search(user_query.username == username):
+            return
         profile = info
-        account = {'username': (f_name.capitalize() + l_name[0].upper() + info['cabin number']),
+        account = {'username': username,
                    'password': pbkdf2_sha256.hash(info['password']),
                    'start_date': "",
                    'day': "",
