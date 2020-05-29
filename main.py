@@ -40,8 +40,11 @@ class KQScreenManager(ScreenManager):
         super(KQScreenManager, self).on_current(instance, value)
         if value == 'activity_screen':
             del ErrorPopup.single
-            ActivityScreenLayout.body.add_widget(ErrorPopup())
-            ActivityScreenLayout.body.load(day=str(ActivityScreenLayout.body.today))
+            body = ActivityScreenLayout.body
+            body.add_widget(ErrorPopup())
+            body.load(day=str(body.chosen_day))
+            # body.no_activity.size = body.activities.size
+            # body.no_activity.pos = body.activities.pos
         if value == 'login_screen':
             LoginScreenLayout.body.add_widget(ErrorPopup())
         if value == 'meal_screen':

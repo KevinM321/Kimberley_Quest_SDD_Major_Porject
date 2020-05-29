@@ -63,13 +63,21 @@ class ActivityScreenLayout(RelativeLayout):
         self.booked_activity = ''
         self.today = ''
         self.no_activity = ''
-        self.color = ''
+        self.end_booking = ''
+        self.color = (Color(rgba=(.25, .25, .25, .7)))
         self.chosen_day = ''
         self.can_book = True
+        Clock.schedule_once(lambda dt: self.build_no_activity(), .5)
+
+    def build_no_activity(self):
+        self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
 
     def load(self, *args, **kwargs):
-        self.delete_popup()
+        # self.delete_popup()
         day = kwargs.pop("day")
+        if (self.no_activity and self.color) in self.activities.canvas.children:
+            self.activities.canvas.remove(self.no_activity)
+            self.activities.canvas.remove(self.color)
         self.booked_activity = loginscreen.LoginScreenLayout.body.user.extract_activity(day)
         activity_today = activity[int(day)]
         self.activities.clear_widgets()
@@ -89,58 +97,84 @@ class ActivityScreenLayout(RelativeLayout):
             self.info.add_widget(Label(size_hint_x=0.01))
             Clock.schedule_once(self.select_saved)
             if loginscreen.LoginScreenLayout.body.user.extract_date() + 4 > int(self.chosen_day):
-                Clock.schedule_once(self.display_end_booking)
-            else:
-                error_popup = loginscreen.ErrorPopup.single
-                if error_popup.children:
-                    error_popup.clear_widgets()
-                    error_popup.canvas.remove(self.color)
-                    error_popup.canvas.remove(self.no_activity)
+                self.display_reminder('Booking has ended')
+                # self.name.clear_widgets()
+                # self.info.clear_widgets()
+            # else:
+            #     error_popup = loginscreen.ErrorPopup.single
+            #     if error_popup.children:
+            #         error_popup.clear_widgets()
+            #         error_popup.canvas.remove(self.color)
+            #         error_popup.canvas.remove(self.no_activity)
+            #         error_popup.canvas.remove(self.end_booking)
         else:
-            if self.color and self.no_activity:
-                self.activities.clear_widgets()
-                self.activities.add_widget(Label(text='NO ACTIVITIES TODAY'))
-            else:
-                Clock.schedule_once(self.display_no_activity)
+            self.display_reminder('No activities today')
 
     def select_saved(self, *args):
         for each in self.activities.children[1: 4]:
             if each.source == self.booked_activity:
                 each.state = 'down'
 
+    def display_reminder(self, text):
+        if (self.no_activity and self.color) in self.activities.canvas.children:
+            self.activities.clear_widgets()
+            self.activities.add_widget(Label(text=text))
+        else:
+            self.no_activity.size = self.activities.size
+            self.no_activity.pos = self.activities.pos
+            self.activities.canvas.add(self.color)
+            self.activities.canvas.add(self.no_activity)
+            self.activities.clear_widgets()
+            self.activities.add_widget(Label(text=text))
+
+
     # delete existing on-screen reminder
-    def delete_popup(self, *args):
-        if self.color and self.no_activity:
-            error_popup = loginscreen.ErrorPopup.single
-            if error_popup.children:
-                error_popup.canvas.remove(self.color)
-                error_popup.canvas.remove(self.no_activity)
-                error_popup.clear_widgets()
-                self.color = ''
-                self.no_activity = ''
-            else:
-                self.activities.canvas.remove(self.color)
-                self.activities.canvas.remove(self.no_activity)
-                self.color = ''
-                self.no_activity = ''
-                self.activities.clear_widgets()
-
-    def display_no_activity(self, *args):
-        BookingButton.body.disabled = True
-        self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
-        self.color = (Color(rgba=(.25, .25, .25, .7)))
-        self.activities.canvas.add(self.color)
-        self.activities.canvas.add(self.no_activity)
-        self.activities.add_widget(Label(text='NO ACTIVITIES TODAY'))
-
-    def display_end_booking(self, *args):
-        error_popup = loginscreen.ErrorPopup.single
-        self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
-        self.color = (Color(rgba=(.25, .25, .25, .7)))
-        error_popup.canvas.add(self.color)
-        error_popup.canvas.add(self.no_activity)
-        error_popup.pos_hint = {'center_x': .5}
-        error_popup.add_widget(Label(text='ACTIVITY BOOKING HAS ENDED', font_size=30, pos_hint={'center_x': .6}))
+    # def delete_popup(self, *args):
+    #     if self.color and self.no_activity:
+    #         error_popup = loginscreen.ErrorPopup.single
+    #         if error_popup.children:
+    #             error_popup.canvas.remove(self.color)
+    #             error_popup.canvas.remove(self.no_activity)
+    #             error_popup.clear_widgets()
+    #             self.color = ''
+    #             self.no_activity = ''
+    #         else:
+    #             self.activities.canvas.remove(self.color)
+    #             self.activities.canvas.remove(self.no_activity)
+    #             self.color = ''
+    #             self.no_activity = ''
+    #             self.activities.clear_widgets()
+    #
+    # def display_no_activity(self, *args):
+    #     BookingButton.body.disabled = True
+    #     self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
+    #     self.color = (Color(rgba=(.25, .25, .25, .7)))
+    #     self.activities.canvas.add(self.color)
+    #     self.activities.canvas.add(self.no_activity)
+    #     self.activities.add_widget(Label(text='NO ACTIVITIES TODAY'))
+    #
+    # def display_end_booking(self, *args):
+    #     error_popup = loginscreen.ErrorPopup.single
+    #     if self.no_activity and self.color:
+    #         if error_popup.children:
+    #             error_popup.clear_widgets()
+    #         error_popup.canvas.remove(self.color)
+    #         error_popup.canvas.remove(self.no_activity)
+    #         self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
+    #         self.color = (Color(rgba=(.25, .25, .25, .7)))
+    #         error_popup.canvas.add(self.color)
+    #         error_popup.canvas.add(self.no_activity)
+    #         error_popup.pos_hint = {'center_x': .5}
+    #         error_popup.add_widget(Label(text='ACTIVITY BOOKING HAS ENDED', font_size=30, pos_hint={'center_x': .6}))
+    #     else:
+    #         error_popup.clear_widgets()
+    #         BookingButton.body.disabled = True
+    #         self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
+    #         self.color = (Color(rgba=(.25, .25, .25, .7)))
+    #         error_popup.canvas.add(self.color)
+    #         error_popup.canvas.add(self.no_activity)
+    #         error_popup.pos_hint = {'center_x': .5}
+    #         error_popup.add_widget(Label(text='ACTIVITY BOOKING HAS ENDED', font_size=30, pos_hint={'center_x': .6}))
 
 
 class ActivityImage(ToggleButton):
