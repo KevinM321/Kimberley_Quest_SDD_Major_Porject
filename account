@@ -4,8 +4,8 @@
       "username": "PeterS1",
       "password": "$pbkdf2-sha256$29000$LiWEcC7lfK9VirH2Puec8w$yhSmg.1aWCYWuANgkACJXA9OVAx9vSGExj/cPcCc8QE",
       "start_date": "19-05-20",
-      "day": "10",
-      "menu": "3"
+      "day": "12",
+      "menu": "1"
     },
     "2": {
       "username": "Le-AnneS1",
@@ -45,9 +45,9 @@
     "7": {
       "username": "JackP5",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": "",
-      "day": "",
-      "menu": ""
+      "start_date": "30-05-20",
+      "day": "1",
+      "menu": "4"
     },
     "8": {
       "username": "KerryP5",
@@ -59,9 +59,9 @@
     "9": {
       "username": "VoN6",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
-      "start_date": "",
-      "day": "",
-      "menu": ""
+      "start_date": "30-05-20",
+      "day": "1",
+      "menu": "5"
     },
     "10": {
       "username": "YoonN6",
@@ -116,7 +116,7 @@
       "username": "FayeV10",
       "password": "$pbkdf2-sha256$29000$uzfmvJfSmvP.XyultBZiDA$fVdOrvwqYOAndN5ZO.LJW4CywsrOQ3Qfgb0OnL5YdzE",
       "start_date": "27-05-20",
-      "day": "3",
+      "day": "4",
       "menu": "3"
     },
     "18": {
@@ -125,13 +125,6 @@
       "start_date": "27-05-20",
       "day": "1",
       "menu": "3"
-    },
-    "19": {
-      "username": "EdwardJ12",
-      "password": "$pbkdf2-sha256$29000$ZmwNYQyhlJJy7h0DgNC6tw$GIU4LQNN.ZwNgWDnoVOWsjAPfO.sDYi.v1DlcfGF/Ig",
-      "start_date": "",
-      "day": "1",
-      "menu": "4"
     }
   }
 }

@@ -28,6 +28,8 @@ about_cuisine = "Cuisine on board Kimberley Quest II is simply delicious.\n" \
                 "Kimberley Quest II is a fully licenced vessel and\n" \
                 "beverages can be pre-ordered prior to your departures. BYO is also an option."
 
+dietary_requirements = 'Vegetarian food only'
+
 
 class MealScreenLayout(RelativeLayout):
 

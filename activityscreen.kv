@@ -18,6 +18,40 @@
     background_normal: self.source
     background_down: self.source
 
+<WarningLayout>
+    proceed_btn: _proceed_btn
+    stop_btn: _stop_btn
+    txt: ''
+    orientation: 'vertical'
+    spacing: 25
+    Widget:
+        size_hint_y: .2
+    Label:
+        size_hint_y: .65
+        font_size: 22.5
+        color: 0, 0, 0, 1
+        text: root.txt
+        bold: True
+        text_size: self.size
+        halign: 'center'
+        valign: 'middle'
+    BoxLayout:
+        size_hint_y: .15
+        spacing: 50
+        Widget:
+            size_hint_x: .2
+        Button:
+            id: _proceed_btn
+            text: 'Proceed'
+        Button:
+            id: _stop_btn
+            text: 'Stop'
+        Widget:
+            size_hint_x: .2
+    Widget:
+        size_hint_y: .15
+
+
 <SelectedLabel>
     canvas.before:
         Color:
@@ -110,6 +144,7 @@
     text: 'Day'
 
 <ActivityScreenLayout>
+    activity_main_screen: _activity_main_screen
     menu: _menu
     name: _name
     activities: _activities
@@ -118,6 +153,7 @@
         Label:
             size_hint_x: .2
         ActivityMainScreen:
+            id: _activity_main_screen
             today: _today
             chosen_day: _chosen_day
             select: _select

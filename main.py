@@ -40,12 +40,15 @@ class KQScreenManager(ScreenManager):
         super(KQScreenManager, self).on_current(instance, value)
         if value == 'activity_screen':
             del ErrorPopup.single
+            if DropDownMenu.body.dropped:
+                DropDownMenu.body.drop_down()
             body = ActivityScreenLayout.body
             body.add_widget(ErrorPopup())
+            body.initiated += 1
             body.load(day=str(body.chosen_day))
-            # body.no_activity.size = body.activities.size
-            # body.no_activity.pos = body.activities.pos
         if value == 'login_screen':
+            LoginScreenLayout.body.login_box.psw_button.text = 'Show'
+            LoginScreenLayout.body.login_box.psw_input.password = True
             LoginScreenLayout.body.add_widget(ErrorPopup())
         if value == 'meal_screen':
             del ErrorPopup.single

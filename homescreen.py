@@ -116,6 +116,8 @@ class HomeScreenButton(Button):
 
     @staticmethod
     def logout():
+        body = activityscreen.ActivityScreenLayout.body
+        body.chosen_day = body.today
         HomeScreenLayout.body.screen_manager.transition = FadeTransition()
         HomeScreenLayout.body.screen_manager.current = 'login_screen'
         for each in mealscreen.MealPanelItem.get_widgets('panel'):

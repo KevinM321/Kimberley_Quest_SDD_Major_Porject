@@ -13,7 +13,7 @@
       "cabin number": 1,
       "age": 40,
       "sex": "female",
-      "special notes": "vegetarian food only",
+      "special notes": "Vegetarian food only",
       "mailing address": "13 Wallaby Way, Port Jackson. NSW."
     },
     "3": {
@@ -142,30 +142,6 @@
       "sex": "male",
       "cabin number": "11",
       "mailing address": "sydney",
-      "special notes": "None"
-    },
-    "19": {
-      "name": "Ji Edward",
-      "age": "17",
-      "sex": "male",
-      "cabin number": "12",
-      "mailing address": "sydney",
-      "special notes": "None"
-    },
-    "20": {
-      "name": "Satcher Peter",
-      "age": "123",
-      "sex": "male",
-      "cabin number": "1",
-      "mailing address": "2",
-      "special notes": "None"
-    },
-    "21": {
-      "name": "V Peter",
-      "age": "123",
-      "sex": "male",
-      "cabin number": "1",
-      "mailing address": "123",
       "special notes": "None"
     }
   }

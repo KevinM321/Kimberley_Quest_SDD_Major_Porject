@@ -28,10 +28,13 @@ class LoginScreenLayout(RelativeLayout):
         self.rs_animation = ''
 
     def to_register(self, args):
-        self.ls_animation = Animation(x=-1250, duration=0.75)
-        self.rs_animation = Animation(x=0, duration=0.75)
-        self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
-        self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
+        if user_manager.User.extract_passenger_number() == 20:
+            ErrorPopup.display('The cruise is full', '')
+        else:
+            self.ls_animation = Animation(x=-1250, duration=0.75)
+            self.rs_animation = Animation(x=0, duration=0.75)
+            self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
+            self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
 
     def to_login(self, username):
         self.ls_animation = Animation(x=0, duration=0.75)
@@ -57,7 +60,7 @@ class LoginScreenLayout(RelativeLayout):
 
     def login(self):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
-        self.login_box.usr_name_input.input_box.text = 'FayeV10'
+        # self.login_box.usr_name_input.input_box.text = 'FayeV10'
         self.login_box.psw_input.input_box.text = '1234'
         accounts = TinyDB('account', indent=2)
         self.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
@@ -152,7 +155,7 @@ class ErrorLabel(BoxLayout):
         Clock.schedule_once(lambda dt: self.move_left(), .25)
 
     def move_left(self):
-        self.animation = Animation(x=565, duration=0.75)
+        self.animation = Animation(x=550, duration=0.75)
         self.animation.start(self)
         Clock.schedule_once(lambda dt: self.wait(), 3)
 

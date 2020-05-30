@@ -33,8 +33,14 @@ class User:
         self.username = username
         self.bookings = user_bookings.search(user_query.username == self.username)
         self.account = user_account.search(user_query.username == self.username)
-        self.special_note = ''
+        self.profile = user_profile.search(user_query.username == self.username)
+        self.special_notes = ''
+        self.extract_profile()
         self.sex = ''
+
+    @staticmethod
+    def extract_passenger_number():
+        return len(user_account.all())
 
     def extract_activity(self, day):
         bookings = self.bookings[0]['activities'][day]
@@ -73,7 +79,7 @@ class User:
             name = each['name'].split(' ')
             if (name[1] + name[0][0] + str(each['cabin number'])) == self.username:
                 user = each
-                self.special_note = user['special notes']
+                self.special_notes = user['special notes']
                 self.sex = user['sex']
                 return user
 

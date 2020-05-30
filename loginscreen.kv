@@ -63,6 +63,7 @@
     register_button: _register_button
     usr_name_input: _usr_name_input
     psw_input: _psw_input
+    psw_button: _psw_button
     size_hint_y: .45
     size_hint_x: .3325
     orientation: 'vertical'
@@ -87,6 +88,7 @@
         password: True
         size_hint_y: .3
         Button:
+            id: _psw_button
             text: 'Show'
             left: self.right
             on_release:
