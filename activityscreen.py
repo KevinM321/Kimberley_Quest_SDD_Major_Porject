@@ -12,6 +12,7 @@ from kivy.core.window import Window
 import loginscreen
 import datetime
 
+# activities for days of the cruise
 activity = {1: '', 2: '', 3: '',
             4: ['res/activity/glass_bottom_boat.jpg', 'res/activity/fishing.jpg', 'res/activity/scuba_diving.jpg'],
             5: ['res/activity/lying_in_stream.jpg', 'res/activity/paddleboarding.jpg',
@@ -26,6 +27,8 @@ activity = {1: '', 2: '', 3: '',
             12: '',
             13: ['res/activity/boat_ride.jpg', 'res/activity/paddleboarding.jpg', 'res/activity/kayak.jpg'],
             14: ''}
+
+# different activities available and information about them
 activity_names = {'res/activity/scuba_diving.jpg': ['Scuba Dive', 'Physical challenge', '160',
                                                     'Enjoy the whole day out in a SCUBA diving adventure. \n'
                                                     'You will be transferred from the Kimberley Quest \n'
@@ -61,8 +64,10 @@ activity_names = {'res/activity/scuba_diving.jpg': ['Scuba Dive', 'Physical chal
 physically_challenged = ('Difficulty walking long distances', 'Pacemaker \u2013 Heart Issues')
 
 
+# class containing the layout of the activity selection screen
 class ActivityScreenLayout(RelativeLayout):
 
+    # create attributes that will be used after initiation
     def __init__(self, **kwargs):
         super(ActivityScreenLayout, self).__init__(**kwargs)
         ActivityScreenLayout.body = self
@@ -76,20 +81,25 @@ class ActivityScreenLayout(RelativeLayout):
         self.can_book = True
         Clock.schedule_once(lambda dt: self.build_no_activity(), .5)
 
+    # creates the rectangular canvas object used when booking has ended or there are no activities
     def build_no_activity(self):
         self.no_activity = Rectangle(size=self.activities.size, pos=self.activities.pos)
 
+    # add the chosen day's activities from 'activity' into the screen
     def load(self, *args, **kwargs):
         day = kwargs.pop("day")
+        # remove already existing canvas displays
         if (self.no_activity and self.color) in self.activities.canvas.children:
             self.activities.canvas.remove(self.no_activity)
             self.activities.canvas.remove(self.color)
+        # clear all sections of the layout of existing widgets
         self.booked_activity = loginscreen.LoginScreenLayout.body.user.extract_activity(day)
         activity_today = activity[int(day)]
         self.activities.clear_widgets()
         self.name.clear_widgets()
         self.info.clear_widgets()
         ActivityMainScreen.body.select.clear_widgets()
+        # check if there are activities for the chosen day
         if activity_today:
             self.activities.add_widget(Label(size_hint_x=0.15))
             self.name.add_widget(Label(size_hint_x=0.15))
@@ -102,6 +112,7 @@ class ActivityScreenLayout(RelativeLayout):
             self.name.add_widget(Label(size_hint_x=0.01))
             self.info.add_widget(Label(size_hint_x=0.01))
             Clock.schedule_once(self.select_saved)
+            # check if today is 3 days before the chosen day or not
             if int(loginscreen.LoginScreenLayout.body.user.extract_date()) + 3 > int(self.chosen_day):
                 if self.initiated > 1:
                     self.display_reminder('Booking has ended')
@@ -115,11 +126,13 @@ class ActivityScreenLayout(RelativeLayout):
                 Clock.schedule_once(lambda dt: self.set_reminder())
                 self.display_reminder('No activities today')
 
+    # extract the selected activity of the chosen day stored in 'bookings' and select that activity
     def select_saved(self, *args):
         for each in self.activities.children[1: 4]:
             if each.source == self.booked_activity:
                 each.state = 'down'
 
+    # display the rectangular canvas object
     def display_reminder(self, text):
         BookingButton.body.disabled = True
         if (self.no_activity and self.color) in self.activities.canvas.children:
@@ -132,15 +145,18 @@ class ActivityScreenLayout(RelativeLayout):
             self.activities.clear_widgets()
             self.activities.add_widget(Label(text=text))
 
+    # set the size and position of the rectangular canvas object
     def set_reminder(self):
         self.no_activity.size = self.activities.size
         self.no_activity.pos = self.activities.pos
 
 
+# class for each instance of a selectable activity
 class ActivityImage(ToggleButton):
 
     source = StringProperty()
 
+    # set attributes that will be used for each instance
     def __init__(self, **kwargs):
         super(ActivityImage, self).__init__(**kwargs)
         self.source = kwargs.pop('source')
@@ -152,10 +168,13 @@ class ActivityImage(ToggleButton):
         self.hover_color = Color(rgba=(.8, .8, .8, .25))
         self.hover_shape = Rectangle(size=(self.width - 5.5, self.height - 5.5),
                                      pos=(self.x + 3, self.y + 3))
+        # extract the mouse's position
         Window.bind(mouse_pos=lambda w, p: self.mouse_hover(p))
 
+    # when an instance is pressed, show selection visually by adding canvas objects
     def on_state(self, instance, value):
         user = loginscreen.LoginScreenLayout.body.user
+        # check for what was selected previously
         booked = self.check_activity()
         if booked:
             if self == booked:
@@ -173,6 +192,7 @@ class ActivityImage(ToggleButton):
                 BookingButton.body.disabled = True
             else:
                 BookingButton.body.disabled = False
+            # change the mouse position so mouse_hover works after an instance is selected
             self.mouse_hover([0, 0])
             self.pressed_shape = Line(width=5, rectangle=(self.x, self.y, self.width, self.height))
             self.canvas.add(self.pressed_shape)
@@ -183,6 +203,7 @@ class ActivityImage(ToggleButton):
                                                                                    (select_label.width/2)))))
             ActivityMainScreen.body.select.add_widget(select_label)
 
+    # check for and returns the last selected activity instance
     @staticmethod
     def check_activity():
         for each in ToggleButton.get_widgets('activities'):
@@ -190,6 +211,7 @@ class ActivityImage(ToggleButton):
                 return each
         return ''
 
+    # show visual clues for when mouse hover over an instance
     def mouse_hover(self, position):
         if not ActivityImage.popup_opened:
             if self.collide_point(*position):
@@ -207,6 +229,7 @@ class ActivityImage(ToggleButton):
                     self.canvas.remove(self.hover_color)
 
 
+# class for the layout of the description of the activities in the popup
 class ActivityLayout(BoxLayout):
 
     def __init__(self, **kwargs):
@@ -222,6 +245,7 @@ class ActivityName(Label):
     pass
 
 
+# class for the layout containing the activity instances
 class ActivityMainScreen(BoxLayout):
 
     def __init__(self, **kwargs):
@@ -229,6 +253,7 @@ class ActivityMainScreen(BoxLayout):
         ActivityMainScreen.body = self
 
 
+# class for the buttons to popup description about activities
 class ActivityInfo(BoxLayout):
 
     def __init__(self, **kwargs):
@@ -253,6 +278,7 @@ class ActivityInfo(BoxLayout):
         popup.open()
 
 
+# class of the warning popups for users with special needs
 class WarningLayout(BoxLayout):
 
     text = StringProperty()
@@ -262,6 +288,7 @@ class WarningLayout(BoxLayout):
         self.txt = kwargs.pop('text')
 
 
+# class for the popup of each activity
 class ActivityPopup(Popup):
 
     def __init__(self, **kwargs):
@@ -274,10 +301,12 @@ class ActivityPopup(Popup):
         ActivityImage.popup_opened = False
 
 
+# class for the canvas object which displays the selected activity
 class SelectedLabel(Label):
     pass
 
 
+# class for the layout of the menu containing selectable days
 class DropDownMenu(BoxLayout):
 
     def __init__(self, **kwargs):
@@ -287,6 +316,7 @@ class DropDownMenu(BoxLayout):
         self.drop_down_background = Color(rgba=(0, 0, 0, 1))
         self.color = Rectangle(size=self.size, pos=self.pos)
 
+    # dynamically create and add buttons for each day of the cruise
     def drop_down(self):
         if not self.children:
             self.dropped = True
@@ -305,6 +335,7 @@ class DropDownMenu(BoxLayout):
             self.canvas.remove(self.drop_down_background)
 
 
+# class for the days
 class DayButton(ToggleButton):
 
     def __init__(self, **kwargs):
@@ -312,6 +343,7 @@ class DayButton(ToggleButton):
         self.day = self.text
         self.text = 'Day ' + self.day
 
+    # change the chosen day and load the chosen day
     def on_release(self):
         super(DayButton, self).on_release()
         ActivityMainScreen.body.chosen_day.text = 'Day ' + self.day
@@ -320,6 +352,7 @@ class DayButton(ToggleButton):
         ActivityScreenLayout.body.chosen_button = self
 
 
+# class for the drop down menu button
 class DropDownButton(Button):
 
     def __init__(self, **kwargs):
@@ -327,6 +360,7 @@ class DropDownButton(Button):
         DropDownButton.body = self
 
 
+# class for the activity booking button
 class BookingButton(Button):
 
     def __init__(self, **kwargs):
@@ -334,9 +368,11 @@ class BookingButton(Button):
         self.disabled = False
         BookingButton.body = self
 
+    # continue booking physically challenging activity
     def proceed(self, args):
         self.book_activity()
 
+    # stop booking physically challenging activity
     @staticmethod
     def stop(button):
         button.state = 'normal'
@@ -344,11 +380,14 @@ class BookingButton(Button):
         BookingButton.body.disabled = True
         loginscreen.ErrorPopup.display('Booking cancel successful', '')
 
+    # check for user specific needs before booking
     def on_release(self):
         user = loginscreen.LoginScreenLayout.body.user
+        # check if user has special needs
         if user.special_notes in physically_challenged:
             for each in ToggleButton.get_widgets('activities'):
                 if each.state == 'down':
+                    # if physically challenging activity is selected popup a warning
                     if activity_names[each.source][1] == 'Physical challenge':
                         content = WarningLayout(text='The activity may be physically challenging\n'
                                                      'Do you wish to proceed?')
@@ -373,6 +412,7 @@ class BookingButton(Button):
         else:
             self.book_activity()
 
+    # book selected activity
     def book_activity(self):
         user = loginscreen.LoginScreenLayout.body.user
         activity_images = ToggleButton.get_widgets('activities')
@@ -384,4 +424,5 @@ class BookingButton(Button):
         else:
             user.book_activity(str(ActivityScreenLayout.body.chosen_day), '')
             ActivityScreenLayout.body.booked_activity = ''
+        # disable booking button until a different activity is chosen
         self.disabled = True

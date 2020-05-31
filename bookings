@@ -2079,7 +2079,7 @@
         "2": "",
         "3": "",
         "4": "res/activity/fishing.jpg",
-        "5": "",
+        "5": "res/activity/paddleboarding.jpg",
         "6": "",
         "7": "",
         "8": "",
@@ -2093,7 +2093,7 @@
       "meals": {
         "1": {
           "Breakfast": {
-            "main_meal": "",
+            "main_meal": "Peanut Butter and Jam Sandwich (Vegetarian)",
             "snacks": "",
             "drinks": ""
           },
@@ -2596,8 +2596,8 @@
         "1": "",
         "2": "",
         "3": "",
-        "4": "",
-        "5": "",
+        "4": "res/activity/scuba_diving.jpg",
+        "5": "res/activity/paddleboarding.jpg",
         "6": "",
         "7": "",
         "8": "",
@@ -2616,7 +2616,7 @@
             "drinks": ""
           },
           "Lunch": {
-            "main_meal": "",
+            "main_meal": "Chickpea Soup (Vegetarian)",
             "snacks": "",
             "drinks": ""
           },
@@ -2628,12 +2628,12 @@
         },
         "2": {
           "Breakfast": {
-            "main_meal": "",
+            "main_meal": "Yogurt Granola Bowl (Vegetarian)",
             "snacks": "",
             "drinks": ""
           },
           "Lunch": {
-            "main_meal": "",
+            "main_meal": "Cheese Burger",
             "snacks": "",
             "drinks": ""
           },

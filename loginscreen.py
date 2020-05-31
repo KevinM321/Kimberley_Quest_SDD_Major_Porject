@@ -17,8 +17,10 @@ import homescreen
 import mealscreen
 
 
+# class for the layout of the login screen
 class LoginScreenLayout(RelativeLayout):
 
+    # call the opening animation and bind the register button to register screen
     def __init__(self, **kwargs):
         super(LoginScreenLayout, self).__init__(**kwargs)
         LoginScreenLayout.body = self
@@ -27,6 +29,7 @@ class LoginScreenLayout(RelativeLayout):
         self.ls_animation = ''
         self.rs_animation = ''
 
+    # check if registration is available and then start animation of screen change to register screen
     def to_register(self, args):
         if user_manager.User.extract_passenger_number() == 20:
             ErrorPopup.display('The cruise is full', '')
@@ -36,14 +39,17 @@ class LoginScreenLayout(RelativeLayout):
             self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
             self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
 
+    # start animation of screen change back to login screen
     def to_login(self, username):
         self.ls_animation = Animation(x=0, duration=0.75)
         self.rs_animation = Animation(x=1250, duration=0.75)
         self.ls_animation.start(LoginScreenLayout.body.login_screen_layout)
         self.rs_animation.start(LoginScreenLayout.body.register_screen_layout)
+        # check if a user was registered and display the generated username
         if username:
             Clock.schedule_once(lambda dt: self.register_successful(username), 0.8)
 
+    #  display a popup when a user is registered successfully
     @staticmethod
     def register_successful(username):
         content = RegisterSuccessfulLayout(username=username)
@@ -58,25 +64,27 @@ class LoginScreenLayout(RelativeLayout):
         content.btn.bind(on_release=popup.dismiss)
         popup.open()
 
+    # called when login button pressed
     def login(self):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
-        # self.login_box.usr_name_input.input_box.text = 'FayeV10'
+        self.login_box.usr_name_input.input_box.text = 'TaroT7'
         self.login_box.psw_input.input_box.text = '1234'
         accounts = TinyDB('account', indent=2)
         self.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
-        if LoginScreenLayout.body.account:
-            if self.login_box.psw_input.input_box.text:
+        if LoginScreenLayout.body.account:  # check if the input username exists
+            if self.login_box.psw_input.input_box.text:  # check if there is a password input
                 if pbkdf2_sha256.verify(self.login_box.psw_input.input_box.text,
-                                        LoginScreenLayout.body.account[0]['password']):
+                                        LoginScreenLayout.body.account[0]['password']):  # check if the password matches
                     self.body.user = user_manager.User(self.login_box.usr_name_input.input_box.text)
                     day_passed = LoginScreenLayout.body.user.extract_date()
+                    # set the user's trip day
                     if day_passed == '1':
                         activityscreen_body.today = day_passed
                         activityscreen_body.chosen_day = day_passed
                     else:
                         activityscreen_body.today = str(day_passed + 1)
                         activityscreen_body.chosen_day = str(day_passed + 1)
-                        if (day_passed + 1) > 14:
+                        if (day_passed + 1) > 14:  # if trip day more than 14 display a popup
                             Popup(title='Kimberley Quest',
                                   content=Label(text='Your Trip Has Ended',
                                                 font_size=35,
@@ -88,6 +96,7 @@ class LoginScreenLayout(RelativeLayout):
                                   title_color=(0, 0, 0, 1),
                                   background='res/system/white_background.jpg').open()
                             return
+                    # set the attributes of different screens for later use
                     activityscreen.ActivityMainScreen.body.chosen_day.text = 'Day ' + activityscreen_body.chosen_day
                     activityscreen.ActivityMainScreen.body.today.text = 'Day ' + activityscreen_body.today
                     self.login_box.usr_name_input.input_box.text = ''
@@ -95,15 +104,17 @@ class LoginScreenLayout(RelativeLayout):
                     self.screen_manager.transition = FadeTransition()
                     self.screen_manager.current = 'home_screen'
                     account = accounts.search(Query().username == LoginScreenLayout.body.user.username)[0]
+                    # find the meal menu for today and build
                     if account['day'] == activityscreen_body.today:
                         for each in mealscreen.MealPanelItem.get_widgets('panel'):
                             each.build_menu(account['menu'])
                     else:
                         account['day'] = activityscreen_body.today
-                        account['menu'] = str(randint(1, 5))
+                        account['menu'] = str(randint(1, 5))  # choose a menu randomly if it is a new day then build
                         accounts.update(account, Query().username == LoginScreenLayout.body.user.username)
                         for each in mealscreen.MealPanelItem.get_widgets('panel'):
                             each.build_menu(account['menu'])
+                    # find the user's profile then display on the profile screen
                     homescreen.HomeScreenLayout.body.update_profile(self.body.user)
                     homescreen.ProfileImage.body.build()
                     homescreen.SideBar.display_date(activityscreen_body.today)
@@ -117,6 +128,7 @@ class LoginScreenLayout(RelativeLayout):
             ErrorPopup.display('Username does not exist', '')
 
 
+# the layout of the popup for registering successfully
 class RegisterSuccessfulLayout(BoxLayout):
 
     username = StringProperty()
@@ -126,6 +138,7 @@ class RegisterSuccessfulLayout(BoxLayout):
         self.usr_label.text = kwargs.pop('username')
 
 
+# popup that displays from the top right side of the screen
 class ErrorPopup(RelativeLayout):
 
     single = None
@@ -136,6 +149,7 @@ class ErrorPopup(RelativeLayout):
         super(ErrorPopup, self).__init__(**kwargs)
         ErrorPopup.single = self
 
+    # create an instance of the popup
     @classmethod
     def display(cls, text, subtext):
         popup = ErrorLabel(pos=(1050, 700),
@@ -147,8 +161,10 @@ class ErrorPopup(RelativeLayout):
         cls.single.add_widget(popup)
 
 
+# the layout for the ErrorPopup
 class ErrorLabel(BoxLayout):
 
+    # start its animation when created
     def __init__(self, **kwargs):
         super(ErrorLabel, self).__init__(**kwargs)
         self.animation = ''
@@ -167,6 +183,7 @@ class ErrorLabel(BoxLayout):
         self.move_right()
 
 
+# the cruise ship animation played when app starts
 class OpenAnimation(Image):
 
     def __init__(self, **kwargs):
