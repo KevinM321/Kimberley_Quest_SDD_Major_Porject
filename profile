@@ -83,7 +83,7 @@
     "11": {
       "name": "Tanaka Taro",
       "cabin number": 7,
-      "age": 56,
+      "age": "56",
       "sex": "male",
       "special notes": "Vegetarian food only",
       "mailing address": "5-2-1 Ginza, Chou-ku Tokyo 170-3293"

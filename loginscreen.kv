@@ -1,3 +1,4 @@
+# the layout of the input box for username and password
 <InputBox@BoxLayout>
     input_box: _input_box
     name: 'name'
@@ -30,7 +31,7 @@
         size_hint_y: .35
         text: 'Your Username Will Be:'
         font_size: 20
-    Label:
+    Label:  # the label displaying the generated username
         size_hint_y: .325
         color: 0, 0, 0, 1
         id: _usr_label
@@ -59,6 +60,7 @@
     size: 375, 250
     source: 'res/system/kq_ship.png'
 
+# the layout in the top left of the login screen
 <LoginInputBox@BoxLayout>
     register_button: _register_button
     usr_name_input: _usr_name_input
@@ -82,12 +84,12 @@
         size_hint_y: .3
         Label:
             size_hint_x:  .3
-    InputBox:
+    InputBox:  # password input box
         id: _psw_input
         name: 'Password'
         password: True
         size_hint_y: .3
-        Button:
+        Button:  # show/hide button which is connected to the text input
             id: _psw_button
             text: 'Show'
             left: self.right
@@ -119,12 +121,12 @@
             size: self.size
             pos: self.pos
             source: 'res/system/white_background.jpg'
-    Label:
+    Label:  # label displaying the main message passed into the ErrorPopup
         color: 0, 0, 0, 1
         font_size: 32.5
         bold: True
         id: _error_text
-    Label:
+    Label: # label displaying the minor message underneath the main message
         id: _sub_text
         size_hint_y: None
         height: 10
@@ -133,12 +135,12 @@
         size_hint_y: None
         height: 25
 
-
+# layout of the login screen
 <LoginScreenLayout>
     login_box: _login_box
     login_screen_layout: _login_screen_layout
     register_screen_layout: _register_screen_layout
-    Image:
+    Image:  # background image of the login screen
         size_hint: None, None
         size: root.size
         allow_stretch: True
@@ -147,7 +149,7 @@
         source: 'res/system/kq_login.jpg'
     OpenAnimation:
         pos: 1450, 267.5
-    RelativeLayout:
+    RelativeLayout:  # layout containing the login button and input box
         pos: 0, 0
         id: _login_screen_layout
         AnchorLayout:
@@ -158,7 +160,7 @@
         BoxLayout:
             size_hint: .185, .315
             pos_hint: {'center_x': .5, 'center_y': .5}
-            Button:
+            Button:  # login button
                 background_normal: 'res/system/login_button_normal.png'
                 background_down: 'res/system/login_button_down.png'
                 bold: True
@@ -176,6 +178,3 @@
 
     LoginScreenLayout:
         screen_manager: root.screen_manager
-
-#    ErrorPopup:
-#        screen_manager: root.screen_manager

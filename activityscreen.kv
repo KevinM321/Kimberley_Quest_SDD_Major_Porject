@@ -8,17 +8,19 @@
     SideBar:
         screen_manager: root.screen_manager
 
-
-<ActivityImage>
+# clickable image for each instance of an activity
+<ActivityImage>:
     group: 'activities'
     canvas:
+        # white outline
         Line:
             width: 2.5
             rectangle: self.x, self.y, self.width, self.height
     background_normal: self.source
     background_down: self.source
 
-<WarningLayout>
+# layout for the warning popup
+<WarningLayout>:
     proceed_btn: _proceed_btn
     stop_btn: _stop_btn
     txt: ''
@@ -26,6 +28,7 @@
     spacing: 25
     Widget:
         size_hint_y: .2
+    # display warning text
     Label:
         size_hint_y: .65
         font_size: 22.5
@@ -51,8 +54,8 @@
     Widget:
         size_hint_y: .15
 
-
-<SelectedLabel>
+# a blue rectangle display that appears above the selected activity image
+<SelectedLabel>:
     canvas.before:
         Color:
             rgba: .1, .1, .8, 1
@@ -64,9 +67,11 @@
     size: 75, 30
     text: 'Selected'
 
-<ActivityName>
+# label for name of each activity
+<ActivityName>:
     font_size: 20
     bold: 'True'
+    # grey background
     canvas.before:
         Color:
             rgba: .25, .25, .25, .7
@@ -74,10 +79,11 @@
             size: self.size
             pos: self.pos
 
-<DayButton>
+<DayButton>:
     group: 'days'
 
-<ActivityInfo>
+#  info button for each activity
+<ActivityInfo>:
     Widget:
         size_hint_x: .3
     Button:
@@ -92,7 +98,8 @@
     Widget:
         size_hint_x: .3
 
-<ActivityInfoBox@BoxLayout>
+# layout for each info button popup
+<ActivityInfoBox@BoxLayout>:
     size_hint_y: .3
     text: ''
     canvas.before:
@@ -101,6 +108,7 @@
         Rectangle:
             size: self.size
             pos: self.pos
+    # display activity name
     Label:
         font_size: 22.5
         size_hint_x: .3
@@ -109,7 +117,8 @@
         bold: True
         color: 0, 0, 0, 1
 
-<ActivityLayout>
+# layout for each activity popup
+<ActivityLayout>:
     Image:
         source: root.source
     BoxLayout:
@@ -139,11 +148,12 @@
             halign: 'left'
             valign: 'middle'
 
-<DropDownButton>
+<DropDownButton>:
     bold: True
     text: 'Day'
 
-<ActivityScreenLayout>
+# layout for the activity screen
+<ActivityScreenLayout>:
     activity_main_screen: _activity_main_screen
     menu: _menu
     name: _name
@@ -152,6 +162,7 @@
     BoxLayout:
         Label:
             size_hint_x: .2
+        # layout which contain displayed widgets
         ActivityMainScreen:
             id: _activity_main_screen
             today: _today
@@ -163,6 +174,7 @@
                     size: self.size
                     pos: self.pos
                     source: 'res/system/kq_1 copy.jpg'
+            # layout for the top part of the activity screen
             BoxLayout:
                 size_hint_y: .3
                 Label:
@@ -227,6 +239,7 @@
                 size_hint_y: .2
             Widget:
                 size_hint_y: .05
+            # layout for bottom part of activity screen
             BoxLayout:
                 size_hint_y: .225
                 Label:

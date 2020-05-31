@@ -1,14 +1,16 @@
-<MenuButton@Button>
+# button class for each screen in the sidebar
+<MenuButton@Button>:
     background_normal: ''
     background_color: .1, .1, 1, .775
     bold: True
     size_hint_y: .1
 
-<WarningBox>
+<WarningBox>:
     orientation: 'vertical'
     warning_label: _warning_label
     Widget:
         size_hint_y: .4
+    # label for displaying the warning message
     Label:
         size_hint_y: .325
         color: 0, 0, 0, 1
@@ -19,12 +21,14 @@
         size_hint_y: .4
 
 
+# the input box used for password input and some profile input in home screen
 <ProfileInputBox@BoxLayout>:
     spacing: 100
     text_input: _text_input
     l_text: ''
     l_width: 100
     password: False
+    # displays the name of the input column
     Label:
         color: 0, 0, 0, 1
         bold: True
@@ -34,6 +38,7 @@
         halign: 'right'
         valign: 'middle'
         text: root.l_text
+    # the input box
     TextInput:
         id: _text_input
         size_hint_x: None
@@ -44,7 +49,7 @@
         cursor_color: 0, 0, 0, 1
         password: root.password
 
-<ChangePasswordLayout>
+<ChangePasswordLayout>:
     new_psw: _new_psw
     old_psw: _old_psw
     orientation: 'vertical'
@@ -59,6 +64,7 @@
         size_hint_y: .75
         l_width: 300
         l_text: 'Original Password:'
+        # show/hide button
         Button:
             text: 'Show'
             left: self.right
@@ -75,6 +81,7 @@
         size_hint_y: .75
         l_width: 300
         l_text: 'New Password:'
+        # show/hide button
         Button:
             text: 'Show'
             left: self.right
@@ -84,6 +91,7 @@
             size_hint_x: .2
         Widget:
             size_hint_x: .05
+    # layout for the buttons on the bottom of the change password popup
     BoxLayout:
         spacing: 50
         size_hint_y: .6
@@ -98,7 +106,9 @@
     Widget:
         size_hint_y: .8
 
-<ChangeProfileLayout>
+# the layout inside the change profile popup
+<ChangeProfileLayout>:
+    gender: _gender
     cancel_button: _cancel_button
     confirm_button: _confirm_button
     orientation: 'vertical'
@@ -110,16 +120,38 @@
         l_text: 'Age:'
         l_width: 125
         Widget:
-    ProfileInputBox:
-        size_hint_y: .35
+    BoxLayout:
+        gender: _gender
         l_text: 'Sex:'
-        l_width: 125
+        spacing: 100
+        Label:
+            color: 0, 0, 0, 1
+            bold: True
+            size_hint_x: None
+            width: 250
+            text_size: self.size
+            halign: 'right'
+            valign: 'middle'
+            text: self.parent.l_text
+        BoxLayout:
+            id: _gender
+#            size_hint_x: None
+#            width: 300
+            ToggleButton:
+                group: 'gender'
+                text: 'Male'
+                allow_no_selection: False
+            ToggleButton:
+                text: 'Female'
+                group: 'gender'
+                allow_no_selection: False
         Widget:
     ProfileInputBox:
         l_text: 'Mailing Address:'
         l_width: 300
         size_hint_y: .6
         Widget:
+    # layout for the special notes input
     BoxLayout:
         text_input: _text_input
         l_text: 'Special Notes:'
@@ -142,6 +174,7 @@
             write_tab: False
             cursor_color: 0, 0, 0, 1
         Widget:
+    # layout for the buttons on the bottom of the change profile popup
     BoxLayout:
         size_hint_y: .5
         spacing: 25
@@ -154,6 +187,7 @@
             text: 'Cancel'
         Widget:
 
+# the layout for each row of the receipt popup
 <ReceiptLabel>:
     text_size: self.size
     valign: 'middle'
@@ -167,11 +201,14 @@
             width: .75
             points: self.x, self.y, self.x + self.width, self.y
 
+# the layout inside the receipt popup
 <ReceiptLayout>:
     sum: _sum
     receipt_rows: _receipt_rows
     orientation: 'vertical'
+    # layout for the top part of the receipt popup
     BoxLayout:
+        # the line drawn above the receipts
         canvas:
             Line:
                 width: 2.5
@@ -196,13 +233,16 @@
             text: 'Price'
         Widget:
             size_hint_x: .15
-    BoxLayout
+    # layout for receipts
+    BoxLayout:
         id: _receipt_rows
         orientation: 'vertical'
         spacing: 10
         Widget:
             size_hint_y: .125
+    # layout for the bottom part of the receipt popup
     BoxLayout:
+        # line drawn below receipts
         canvas:
             Color:
                 rgba: .1, .1, 1, 1
@@ -218,6 +258,7 @@
             bold: True
             color: 0, 0, 0, 1
             font_size: 22.5
+        # displays the price sum of all booked activities
         Label:
             text_size: self.size
             halign: 'left'
@@ -227,9 +268,11 @@
             color: 0, 0, 0, 1
             size_hint_x: .425
 
+# the layout for each row of input inside the profile layout in home screen
 <ProfileInfo>:
     info: _info
     type: _type
+    # display the type of profile info
     Label:
         text_size: self.size
         font_size: 22.5
@@ -246,6 +289,7 @@
         size_hint_x: .1
         valign: 'middle'
         halign: 'left'
+    # display the extracted profile info for that type
     Label:
         text_size: self.size
         font_size: 20
@@ -257,11 +301,13 @@
     font_size: 17.5
     bold: True
 
-<SideBar>
+# the layout for the sidebar
+<SideBar>:
     day: _day
     size_hint_x: .2
     BoxLayout:
         orientation: 'vertical'
+        # background image for the sidebar
         canvas.before:
             Color:
                 rgba: 1, 1, 1, 1
@@ -269,7 +315,7 @@
                 size: self.size
                 pos: self.pos
                 source: 'res/system/white_background.jpg'
-        spacing: 10
+        spacing: 20
         BoxLayout:
             orientation: 'vertical'
             size_hint_y: .3
@@ -286,13 +332,11 @@
         MenuButton:
             text: 'MEAL'
             on_release: root.screen_manager.current = 'meal_screen'
-#        MenuButton:
-#            text: 'LOCATION'
-#            on_release: root.screen_manager.current = 'location_screen'
         BoxLayout:
             size_hint_y: .2
             Widget:
                 size_hint_y: .4
+            # display the current user's trip day
             Label:
                 font_size: 21.25
                 id: _day
@@ -308,7 +352,9 @@
                 size: 50, 50
             Widget:
 
-<HomeScreenLayout>
+# layout of the home screen
+<HomeScreenLayout>:
+    # home screen background image
     canvas.before:
         Rectangle:
             size: self.size
@@ -321,6 +367,7 @@
     BoxLayout:
         Label:
             size_hint_x: .2
+        # contains the displayed parts
         BoxLayout:
             id: _main_display
             orientation: 'vertical'
@@ -336,6 +383,7 @@
             BoxLayout:
                 Widget:
                     size_hint_x: .225
+                # layout for the display of the selected activity for today
                 BoxLayout:
                     size_hint_x: .9
                     orientation: 'vertical'
@@ -376,8 +424,10 @@
                 size_hint_y: .85
                 Label:
                     size_hint_x: .075
+                # layout for the display of the user's profile
                 BoxLayout:
                     orientation: 'vertical'
+                    # grey rectangular background
                     canvas.before:
                         Color:
                             rgba: .3, .3, .3, .7
@@ -387,6 +437,7 @@
                         Line:
                             width: 3.25
                             rectangle: self.x, self.y, self.width, self.height
+                    # the layout containing each profile info
                     BoxLayout:
                         id: _profile
                         orientation: 'vertical'
@@ -401,6 +452,7 @@
                     size_hint_x: .03
             Widget:
                 size_hint_y: .04
+            # layout for the bottom part of home screen
             BoxLayout:
                 size_hint_y: .2
                 Widget:
@@ -418,7 +470,7 @@
                         on_release: self.change_password()
                 Widget:
                     size_hint_x: .0275
-            Widget
+            Widget:
                 size_hint_y: .04
 
 

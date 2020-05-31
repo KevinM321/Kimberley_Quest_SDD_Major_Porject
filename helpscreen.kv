@@ -7,24 +7,30 @@
                 source: 'res/system/white_background.jpg'
         orientation: 'vertical'
         Widget:
-            size_hint_y: .25
+            size_hint_y: .1
+        Label:
+            color: 0, 0, 0, 1
+            font_size: 45
+            text: 'User Help'
+            bold: True
+            size_hint_y: .15
         BoxLayout:
             size_hint_y: .7
             Widget:
             BoxLayout:
+                size_hint_y: .8
                 size_hint_x: .7
                 orientation: 'vertical'
                 spacing: 70
                 Button:
+                    text: 'Home Screen'
+                Button:
                     text: 'Activity Selection'
                 Button:
                     text: 'Mean Selection'
-                Button:
-
-                Button:
             Widget:
         Widget:
-            size_hint_y: .25
+            size_hint_y: .3
 
 <HelpScreen@Screen>:
     name: 'help_screen'

@@ -1,3 +1,4 @@
+# layout for some input boxes in register screen
 <RegisterInputBox@BoxLayout>:
     text_input: _text_input
     l_text: ''
@@ -18,12 +19,12 @@
     Widget:
         size_hint_x: .125
 
-<RegisterScreenLayout>:
+<RegisterScreenLayout>:  # the layout for the register screen
     register_input: _register_input
     BoxLayout:
         Widget:
             size_hint_x: .6
-        BoxLayout:
+        BoxLayout:  # the layout containing displayed widgets
             orientation: 'vertical'
             Label:
                 bold: True
@@ -31,7 +32,7 @@
                 font_size: 37.5
                 color: .1, .1, 1, 1
                 size_hint_y: .175
-            BoxLayout:
+            BoxLayout:  # layout containing the input boxes
                 id: _register_input
                 orientation: 'vertical'
                 canvas.before:
@@ -43,7 +44,7 @@
                 spacing: 12.5
                 Widget:
                     size_hint_y: .05
-                BoxLayout:
+                BoxLayout:  # name input box layout
                     text_input1: _text_input1
                     text_input2: _text_input2
                     size_hint_y: .2
@@ -74,7 +75,7 @@
                             write_tab: False
                     Widget:
                         size_hint_x: .125
-                BoxLayout:
+                BoxLayout:  # password input box
                     psw_input: _psw_input
                     l_text: 'Password:'
                     password: True
@@ -107,7 +108,7 @@
                 RegisterInputBox:
                     size_hint_y: .2
                     l_text: 'Age:'
-                BoxLayout:
+                BoxLayout:  # gender input box
                     sex_button: _sex_button
                     l_text: 'Sex:'
                     size_hint_y: .2
@@ -135,7 +136,7 @@
                 RegisterInputBox:
                     size_hint_y: .2
                     l_text: 'Mailing Address:'
-                BoxLayout:
+                BoxLayout:  # special notes input box
                     text_input: _text_input
                     l_text: 'Special Notes:'
                     size_hint_y: .5
@@ -156,7 +157,7 @@
                     text: 'Note:    Account name will be generated from your first name, last name and cabin number'
             Widget:
                 size_hint_y: .05
-            BoxLayout:
+            BoxLayout:  # layout for the buttons of register screen
                 size_hint_y: .1
                 spacing: 100
                 Widget:
