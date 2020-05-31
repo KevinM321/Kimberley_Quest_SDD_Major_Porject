@@ -67,8 +67,6 @@ class LoginScreenLayout(RelativeLayout):
     # called when login button pressed
     def login(self):
         activityscreen_body = activityscreen.ActivityScreenLayout.body
-        self.login_box.usr_name_input.input_box.text = 'TaroT7'
-        self.login_box.psw_input.input_box.text = '1234'
         accounts = TinyDB('account', indent=2)
         self.body.account = accounts.search(Query().username == self.login_box.usr_name_input.input_box.text)
         if LoginScreenLayout.body.account:  # check if the input username exists

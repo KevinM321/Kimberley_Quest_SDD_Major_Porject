@@ -125,6 +125,13 @@
       "start_date": "27-05-20",
       "day": "1",
       "menu": "3"
+    },
+    "19": {
+      "username": "EdwardJ12",
+      "password": "$pbkdf2-sha256$29000$CAFAKCUEIOQ8B2Ds/V.rdQ$yJKriZNtX7PCC6qCPqIpwFoVivQvSkLx0WyfdRRnlOs",
+      "start_date": "27-05-20",
+      "day": "5",
+      "menu": "4"
     }
   }
 }
