@@ -134,17 +134,22 @@
             valign: 'middle'
             text: self.parent.l_text
         BoxLayout:
-            id: _gender
-#            size_hint_x: None
-#            width: 300
-            ToggleButton:
-                group: 'gender'
-                text: 'Male'
-                allow_no_selection: False
-            ToggleButton:
-                text: 'Female'
-                group: 'gender'
-                allow_no_selection: False
+            size_hint_y: .6
+            orientation: 'vertical'
+            BoxLayout:
+                id: _gender
+                size_hint_x: None
+                width: 300
+                ToggleButton:
+                    group: 'gender'
+                    text: 'Male'
+                    allow_no_selection: False
+                ToggleButton:
+                    text: 'Female'
+                    group: 'gender'
+                    allow_no_selection: False
+            Widget:
+                size_hint_y: .1
         Widget:
     ProfileInputBox:
         l_text: 'Mailing Address:'
@@ -323,6 +328,7 @@
                 size: self.size
                 pos: self.pos
                 source: 'res/system/sidebar_logo.png'
+        # three buttons for 3 screens
         MenuButton:
             text: 'HOME'
             on_release: root.screen_manager.current = 'home_screen'
@@ -345,6 +351,7 @@
             Widget:
         BoxLayout:
             size_hint_y: .1
+            # user help screen button
             KimberleyInfo:
                 background_normal: 'res/system/kq_info_normal.png'
                 background_down: 'res/system/kq_info_down.png'

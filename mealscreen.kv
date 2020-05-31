@@ -5,7 +5,7 @@
     snacks: _snacks
     BoxLayout:
         orientation: 'vertical'
-        BoxLayout:
+        BoxLayout:  # main meal section
             orientation: 'vertical'
             size_hint_y: .275
             id: _main_meal
@@ -21,7 +21,7 @@
                         size: self.size
                         pos: self.pos
 
-        BoxLayout:
+        BoxLayout:  # snacks section
             orientation: 'vertical'
             size_hint_y: .21
             id: _snacks
@@ -36,7 +36,7 @@
                     Rectangle:
                         size: self.size
                         pos: self.pos
-        BoxLayout:
+        BoxLayout:  # drinks section
             orientation: 'vertical'
             size_hint_y: .2
             id: _drinks

@@ -2684,7 +2684,7 @@
             "drinks": ""
           },
           "Lunch": {
-            "main_meal": "",
+            "main_meal": "Club Sandwich",
             "snacks": "",
             "drinks": ""
           },
@@ -4154,7 +4154,7 @@
         "5": "res/activity/lying_in_stream.jpg",
         "6": "",
         "7": "res/activity/holding_a_large_fish_and_taking_a_photo.jpg",
-        "8": "res/activity/heli_ride.jpg",
+        "8": "",
         "9": "",
         "10": "",
         "11": "res/activity/scuba_diving.jpg",

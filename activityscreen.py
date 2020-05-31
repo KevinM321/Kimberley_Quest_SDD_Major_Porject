@@ -4,13 +4,11 @@ from kivy.uix.label import Label
 from kivy.uix.togglebutton import ToggleButton
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
-from kivy.uix.image import Image
 from kivy.properties import StringProperty
 from kivy.graphics import Line, Color, Rectangle
 from kivy.clock import Clock
 from kivy.core.window import Window
 import loginscreen
-import datetime
 
 # activities for days of the cruise
 activity = {1: '', 2: '', 3: '',
@@ -43,7 +41,10 @@ activity_names = {'res/activity/scuba_diving.jpg': ['Scuba Dive', 'Physical chal
                   'res/activity/fishing.jpg': ['Fishing', 'Moderate', '40',
                                                'Walk to a fishing spot where the fish are always biting. \n'
                                                'Lunch will be the fish caught and cooked on the spot.'],
-                  'res/activity/lying_in_stream.jpg': ['Lying In Stream', 'Easy going', '300', ''],
+                  'res/activity/lying_in_stream.jpg': ['Lying In Stream', 'Easy going', '300',
+                                                       'You get to lie in a \n'
+                                                       'stream of water. \n'
+                                                       'How amazing is that!'],
                   'res/activity/holding_a_large_fish_and_taking_a_photo.jpg': ['Holding A Large Fish And Taking A Photo'
                                                                                , 'Physical challenge', '300',
                                                                                'Enjoy the once in a '
@@ -51,15 +52,25 @@ activity_names = {'res/activity/scuba_diving.jpg': ['Scuba Dive', 'Physical chal
                                                                                'of taking a photo '
                                                                                'while holding a fish\n'
                                                                                'larger than your head!'],
-                  'res/activity/boat_ride.jpg': ['Landscape Exploration Boat ride', 'Easy going', '120', ''],
-                  'res/activity/bushwalking.jpg': ['Bushwalking', 'Moderate', '40', ''],
-                  'res/activity/relax_on_the_beach.jpg': ['Relax On The Beach', 'Easy going', '10', ''],
-                  'res/activity/catch_and_cook.jpg': ['Catch And Cook', 'Physical challenge', '60', ''],
-                  'res/activity/paddleboarding.jpg': ['Paddleboarding', 'Moderate', '60', ''],
+                  'res/activity/boat_ride.jpg': ['Landscape Exploration Boat ride', 'Easy going', '120',
+                                                 'Explore the beautiful landscapes of \n'
+                                                 'The Kimberley Quest.'],
+                  'res/activity/bushwalking.jpg': ['Bushwalking', 'Moderate', '40',
+                                                   'Adventures into the national parks and beautiful nature.'],
+                  'res/activity/relax_on_the_beach.jpg': ['Relax On The Beach', 'Easy going', '10',
+                                                          'Relax with some friends and enjoy \n'
+                                                          'a variety of drinks and snacks.'],
+                  'res/activity/catch_and_cook.jpg': ['Catch And Cook', 'Physical challenge', '60',
+                                                      'Challenge yourself by trying to catch and fish \n'
+                                                      'using primitive tools, and \n'
+                                                      'cooking your catch'],
+                  'res/activity/paddleboarding.jpg': ['Paddleboarding', 'Moderate', '60',
+                                                      'Enjoy a peaceful ride above the blue ocean.'],
                   'res/activity/heli_ride.jpg': ['Helicopter Ride', 'Moderate', '300',
                                                  'Take our helicopter and enjoy an amazing ride \n'
                                                  'showcasing unique and beautiful scenery of '],
-                  'res/activity/kayak.jpg': ['Kayaking', 'Physical challenge', '60', '']}
+                  'res/activity/kayak.jpg': ['Kayaking', 'Physical challenge', '60',
+                                             'Experience kayaking around the Kimberley']}
 
 physically_challenged = ('Difficulty walking long distances', 'Pacemaker \u2013 Heart Issues')
 

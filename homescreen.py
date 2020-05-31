@@ -14,6 +14,7 @@ import activityscreen
 
 number_pattern = r"[0-9]+$"
 
+
 # class for the layout of the home screen
 class HomeScreenLayout(RelativeLayout):
 
@@ -95,7 +96,7 @@ class KimberleyInfo(Button):
         super(KimberleyInfo, self).__init__(**kwargs)
 
     def on_release(self):
-        self.last_screen = HomeScreenLayout.body.screen_manager.current  # store the screen of pressed button
+        KimberleyInfo.last_screen = HomeScreenLayout.body.screen_manager.current  # store the screen of pressed button
         HomeScreenLayout.body.screen_manager.current = 'help_screen'  # change to help screen
 
 

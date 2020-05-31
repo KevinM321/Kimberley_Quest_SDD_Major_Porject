@@ -1,36 +1,59 @@
 <HelpScreenLayout>
     BoxLayout:
-        canvas.before:
+        canvas.before:  # background image of help screen
             Rectangle:
                 size: self.size
                 pos: self.pos
                 source: 'res/system/white_background.jpg'
-        orientation: 'vertical'
-        Widget:
-            size_hint_y: .1
-        Label:
-            color: 0, 0, 0, 1
-            font_size: 45
-            text: 'User Help'
-            bold: True
-            size_hint_y: .15
         BoxLayout:
-            size_hint_y: .7
+            size_hint_x: .3
+            orientation: 'vertical'
             Widget:
+                size_hint_y: .125
             BoxLayout:
-                size_hint_y: .8
-                size_hint_x: .7
-                orientation: 'vertical'
-                spacing: 70
-                Button:
-                    text: 'Home Screen'
-                Button:
-                    text: 'Activity Selection'
-                Button:
-                    text: 'Mean Selection'
+                size_hint_y: .15
+                Widget:
+                    size_hint_x: .3
+                Button:  # button for quitting the user help screen
+                    text: 'BACK'
+                    bold: True
+                    on_release: root.back()
+                Widget:
+                    size_hint_x: .2
             Widget:
+        BoxLayout:
+            orientation: 'vertical'
+            Widget:
+                size_hint_y: .1
+            Label:
+                color: 0, 0, 0, 1
+                font_size: 45
+                text: 'User Help'
+                bold: True
+                size_hint_y: .15
+            BoxLayout:
+                size_hint_y: .7
+                Widget:
+                BoxLayout:  # layout containing 3 buttons for calling a function for each screen's help
+                    size_hint_y: .8
+                    size_hint_x: .7
+                    orientation: 'vertical'
+                    spacing: 70
+                    Button:
+                        text: 'Home Screen'
+                        on_release: root.popup_help('res/library/home_screen_help.png')
+                    Button:
+                        on_release: root.popup_help('res/library/activity_screen_help.png')
+                        text: 'Activity Selection'
+                    Button:
+                        on_release: root.popup_help('res/library/meal_screen_help.png')
+                        text: 'Mean Selection'
+                Widget:
+            Widget:
+                size_hint_y: .3
         Widget:
-            size_hint_y: .3
+            size_hint_x: .3
+
 
 <HelpScreen@Screen>:
     name: 'help_screen'

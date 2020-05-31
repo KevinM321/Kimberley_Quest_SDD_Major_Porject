@@ -3,10 +3,8 @@ from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.button import Button
 from kivy.uix.tabbedpanel import TabbedPanel, TabbedPanelItem
 from kivy.uix.popup import Popup
-from kivy.uix.image import Image
 from kivy.uix.label import Label
 from tinydb import TinyDB
-from kivy.clock import Clock
 import loginscreen
 import activityscreen
 

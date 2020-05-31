@@ -3,8 +3,8 @@ import loginscreen
 import user_manager
 import re
 
-string_pattern = r"[A-Za-z]+$"
-number_pattern = r"[0-9]+$"
+string_pattern = r"[A-Za-z]+$"  # pattern for name inputs
+number_pattern = r"[0-9]+$"     # pattern for age or cabin number inputs
 
 
 # class for the layout of register screen

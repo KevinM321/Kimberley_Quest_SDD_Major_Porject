@@ -6,7 +6,6 @@ from kivy.config import Config
 from loginscreen import *
 from homescreen import *
 from activityscreen import *
-from locationscreen import *
 from mealscreen import *
 from registerscreen import *
 from helpscreen import *
@@ -24,7 +23,6 @@ kivy.require("1.11.1")
 Builder.load_file('loginscreen.kv')
 Builder.load_file('homescreen.kv')
 Builder.load_file('activityscreen.kv')
-Builder.load_file('locationscreen.kv')
 Builder.load_file('mealscreen.kv')
 Builder.load_file('registerscreen.kv')
 Builder.load_file('helpscreen.kv')
@@ -43,7 +41,7 @@ class KQScreenManager(ScreenManager):
             body = ActivityScreenLayout.body
             body.add_widget(ErrorPopup())
             body.initiated += 1
-            body.load(day=str(body.chosen_day))
+            body.load(day=str(body.chosen_day))  # load the chosen activity and activities
         if value == 'login_screen':
             LoginScreenLayout.body.login_box.psw_button.text = 'Show'
             LoginScreenLayout.body.login_box.psw_input.password = True
@@ -51,7 +49,7 @@ class KQScreenManager(ScreenManager):
         if value == 'meal_screen':
             del ErrorPopup.single
             MealScreenLayout.body.add_widget(ErrorPopup())
-            for each in MealPanelItem.get_widgets('panel'):
+            for each in MealPanelItem.get_widgets('panel'):  # load the menus for today
                 Clock.schedule_once(lambda dt: each.update_menu(),.1)
                 if each.text == MealPanelItem.selected:
                     selected = each
